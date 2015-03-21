@@ -22,6 +22,6 @@
     "url": "https://github.com/cismous/nodebb-theme-lavender/issues"
   },
   "peerDependencies": {
-    "nodebb-theme-vanilla": "https://github.com/cismous/nodebb-theme-vanilla"
+    "nodebb-theme-vanilla": "^1.0.0"
   }
 }
