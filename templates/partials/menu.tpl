@@ -23,14 +23,16 @@
 			<div class="navbar-collapse collapse navbar-ex1-collapse">
 				<!-- IF !maintenanceHeader -->
 				<ul id="main-nav" class="nav navbar-nav pull-left">
-					<!-- IF loggedIn -->
 					<li>
 						<a href="{relative_path}/unread" title="[[global:header.unread]]">
 							<i id="unread-count" class="fa fa-fw fa-inbox" data-content="0" ></i><span class="visible-xs-inline"> [[global:header.unread]]</span>
 						</a>
 					</li>
-					<!-- ENDIF loggedIn -->
-
+                    <li>
+                        <a href="{relative_path}/votes" title="[[global:header.votes]]">
+                            <i class="fa fa-fw fa-flag"></i><span class="visible-xs-inline"> [[global:header.votes]]</span>
+                        </a>
+                    </li>
 					<li>
 						<a href="{relative_path}/recent" title="[[global:header.recent]]">
 							<i class="fa fa-fw fa-clock-o"></i><span class="visible-xs-inline"> [[global:header.recent]]</span>
