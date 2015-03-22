@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-theme-lavender",
+	"id": "nodebb-theme-sim",
 	"library": "./lib/theme.js",
 	"hooks": [
 		{
@@ -19,7 +19,7 @@
 		"vendor": "static/vendor"
 	},
 	"scripts": [
-		"static/lib/lavender.js",
+		"static/lib/sim.js",
 		"static/vendor/masonry.js",
 		"static/vendor/imagesLoaded.js"
 	]

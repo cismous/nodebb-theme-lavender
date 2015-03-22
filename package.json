@@ -1,25 +1,25 @@
 {
-  "name": "nodebb-theme-lavender",
+  "name": "nodebb-theme-sim",
   "version": "1.0.24",
-  "description": "Lavender Theme for NodeBB",
+  "description": "Sim Theme for NodeBB",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cismous/nodebb-theme-lavender"
+    "url": "https://github.com/cismous/nodebb-theme-sim"
   },
   "keywords": [
     "nodebb",
-    "lavender",
+    "sim",
     "theme",
     "themes"
   ],
   "author": {
-    "name": "psychobunny",
-    "email": "psycho.bunny@hotmail.com"
+    "name": "cismous",
+    "email": "cismous@gmail.com"
   },
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/cismous/nodebb-theme-lavender/issues"
+    "url": "https://github.com/cismous/nodebb-theme-sim/issues"
   },
   "peerDependencies": {
     "nodebb-theme-vanilla": "^1.0.0"
