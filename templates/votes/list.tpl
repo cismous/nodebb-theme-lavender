@@ -18,5 +18,12 @@
                 </div>
 			</span>
         </div>
+
+        <!-- IF !votes.length -->
+        <div class="alert alert-warning" id="vote-no-votes">
+            [[vote_list:no_votes]]
+        </div>
+        <!-- ENDIF !votes.length -->
+
     </div>
 </div>
