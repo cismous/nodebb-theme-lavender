@@ -1,6 +1,6 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
-<div class="vote row">
+<div class="category row">
     <div class="{vote_row_size}" no-widget-class="col-lg-12 col-sm-12" no-widget-target="sidebar">
         <div class="header vote-tools clearfix">
             <button id="new_vote" class="btn btn-primary">[[vote_list:new_vote_button]]</button>
@@ -48,7 +48,7 @@
                             </div>
                             <div class="category-text">
                                 <p><strong><i component="topic/pinned" class="fa fa-thumb-tack<!-- IF !votes.pinned --> hide<!-- ENDIF !votes.pinned -->"></i> <i component="topic/locked" class="fa fa-lock<!-- IF !votes.locked --> hide<!-- ENDIF !votes.locked -->"></i></strong>
-                                    <a href="{relative_path}/topic/{votes.slug}" itemprop="url" class="topic-title">{votes.title}</a><br />
+                                    <a href="{relative_path}/votes/{votes.slug}" itemprop="url" class="topic-title">{votes.username}</a><br />
                                     <small>
                                         [[global:posted_ago, <span class="timeago" title="{votes.relativeTime}"></span>]]
                                         <!-- IF !votes.unreplied -->
