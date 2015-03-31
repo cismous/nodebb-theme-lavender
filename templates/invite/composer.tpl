@@ -1,4 +1,4 @@
-<div class="composer vote-composer">
+<div class="composer" id="invite-composer">
 
     <div class="composer-container">
         <nav class="navbar navbar-fixed-top mobile-navbar visible-xs visible-sm">
@@ -11,18 +11,18 @@
         </nav>
 
         <div class="form-group">
-            <label for="username" class="control-label">[[vote:composer.invite_username]]</label>
-            <input class="form-control" type="text" placeholder="[[vote:composer.type_username]]" name="username" id="username" autocorrect="off" autocapitalize="off"/>
+            <label for="username" class="control-label">[[invite:composer.invite_username]]</label>
+            <input class="form-control" type="text" placeholder="[[invite:composer.type_username]]" name="username" id="username" autocorrect="off" autocapitalize="off"/>
         </div>
 
         <div class="form-group">
-            <label for="email" class="control-label">[[vote:composer.invite_email]]</label>
-            <input class="form-control" type="text" placeholder="[[vote:composer.type_email]]" name="email" id="email" autocorrect="off" autocapitalize="off"/>
+            <label for="email" class="control-label">[[invite:composer.invite_email]]</label>
+            <input class="form-control" type="text" placeholder="[[invite:composer.type_email]]" name="email" id="email" autocorrect="off" autocapitalize="off"/>
         </div>
 
         <div class="row category-tag-row">
             <div class="btn-toolbar formatting-bar">
-                <div class="vote-reason">[[vote:composer.invite_reason]]</div>
+                <div class="vote-reason">[[invite:composer.invite_reason]]</div>
                 <div class="btn-group">
                     <!-- BEGIN formatting -->
                     <!-- IF formatting.spacer -->
