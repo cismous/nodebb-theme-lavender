@@ -1,4 +1,4 @@
-<div class="composer" id="invite-composer">
+<div class="composer invite-composer">
 
     <div class="composer-container">
         <nav class="navbar navbar-fixed-top mobile-navbar visible-xs visible-sm">
@@ -22,7 +22,7 @@
 
         <div class="row category-tag-row">
             <div class="btn-toolbar formatting-bar">
-                <div class="vote-reason">[[invite:composer.invite_reason]]</div>
+                <div class="invite-reason">[[invite:composer.invite_reason]]</div>
                 <div class="btn-group">
                     <!-- BEGIN formatting -->
                     <!-- IF formatting.spacer -->
