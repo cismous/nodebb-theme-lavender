@@ -13,7 +13,7 @@
 					<label for="email" class="col-lg-4 control-label">[[register:email_address]]</label>
 					<div class="col-lg-8">
 						<div class="input-group">
-							<input class="form-control" type="text" value="{email}" name="email" id="email" autocorrect="off" autocapitalize="off" />
+							<input class="form-control" type="text" value="{email}" name="email" id="email" readonly autocorrect="off" autocapitalize="off" />
 							<span class="input-group-addon">
 								<span id="email-notify"><i class="fa fa-circle-o"></i></span>
 							</span>
@@ -25,7 +25,7 @@
 					<label for="username" class="col-lg-4 control-label">[[register:username]]</label>
 					<div class="col-lg-8">
 						<div class="input-group">
-							<input class="form-control" type="text" value="{username}" name="username" id="username" autocorrect="off" autocapitalize="off" />
+							<input class="form-control" type="text" value="{username}" name="username" id="username" readonly autocorrect="off" autocapitalize="off" />
 							<span class="input-group-addon">
 								<span id="username-notify"><i class="fa fa-circle-o"></i></span>
 							</span>
