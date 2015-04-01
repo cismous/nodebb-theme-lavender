@@ -69,11 +69,11 @@
                                 </small>
 
                                 <!-- IF !reputation:disabled -->
-                                <button component="invite/upvote" class="btn btn-primary" type="button">[[global:header.invite]] <span component="invite/vote-count" class="badge votes" data-votes="invitecount">{invitecount}</span></button>
+                                <button component="invite/upvote" class="btn btn-primary" type="button">[[global:header.invite]] <span component="invite/vote-count" class="badge votes" data-votes="inviteCount">{inviteCount}</span></button>
                                 <!-- ENDIF !reputation:disabled -->
 
                                 <span class="post-tools">
-                                    <!-- IF !selfPost -->
+                                    <!-- IF !isSelf -->
                                     <!-- IF user.userslug -->
                                     <!-- IF loggedIn -->
                                     <!-- IF !config.disableChat -->
@@ -81,7 +81,7 @@
                                     <!-- ENDIF !config.disableChat -->
                                     <!-- ENDIF loggedIn -->
                                     <!-- ENDIF user.userslug -->
-                                    <!-- ENDIF !selfPost -->
+                                    <!-- ENDIF !isSelf -->
                                     <!-- IF display_moderator_tools -->
                                         <button component="invite/edit" class="btn btn-sm btn-link edit" type="button" title="[[topic:edit]]"><i class="fa fa-pencil"></i><span class="hidden-xs-inline"> [[topic:edit]]</span></button>
                                         <button component="invite/delete" class="btn btn-sm btn-link delete" type="button" title="[[topic:delete]]"><i class="fa fa-trash-o"></i><span class="hidden-xs-inline"> [[topic:delete]]</span></button>

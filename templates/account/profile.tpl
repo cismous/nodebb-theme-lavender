@@ -71,6 +71,14 @@
 
             <div class="panel panel-default">
                 <div class="panel-body text-center">
+
+                    <!-- IF isSelf -->
+                    <!-- IF email -->
+                    <span class="account-bio-label">[[user:email]]</span>
+                    <span class="account-bio-value"><i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> {email}</span>
+                    <!-- ENDIF email -->
+                    <!-- ENDIF isSelf -->
+
                     <!-- IF fullname -->
                     <span class="account-bio-label">[[user:fullname]]</span>
                     <span class="account-bio-value">{fullname}</span>
