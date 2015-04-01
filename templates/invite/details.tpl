@@ -34,12 +34,12 @@
                                     <!-- IF invited-->
                                     <hr>
                                     <div class="invited">
-                                        <span class="time">{invitedTime}</span><span>: 邀请邮件已发出</span>
+                                        <span class="time">{invitedTime}</span><span>: [[invite:email.invited]]</span>
                                     </div>
                                     <!-- ENDIF invited-->
                                     <!-- IF joined-->
                                     <div class="joined">
-                                        <span class="time">{joinedTime}</span><span>: 被邀请者已进入</span>
+                                        <span class="time">{joinedTime}</span><span>: [[invite:email.joined]]</span>
                                     </div>
                                     <!-- ENDIF joined-->
                                 </div>
