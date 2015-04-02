@@ -49,9 +49,9 @@
                         </div>
                         <div class="col-xs-2 category-stat replies hidden-sm hidden-xs">
                             <!-- IF invite.joined -->
-                            <p class="no-replies">[[invite:no_joined]]</p>
+                            <p class="no-replies">[[invite:list.joined]]</p>
                             <!-- ELSE -->
-                            <p class="no-replies">[[invite:joined]]</p>
+                            <p class="no-replies">[[invite:list.no_joined]]</p>
                             <!-- ENDIF invite.joined -->
                         </div>
                     </div>
