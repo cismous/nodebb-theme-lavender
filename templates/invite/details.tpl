@@ -97,4 +97,4 @@
 
 <div widget-area="footer" class="col-xs-12"></div>
 
-<!-- IMPORT partials/variables/vote.tpl -->
+<!-- IMPORT partials/variables/invite.tpl -->
