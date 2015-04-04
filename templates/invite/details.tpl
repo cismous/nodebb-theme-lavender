@@ -83,11 +83,12 @@
                                 <!-- ENDIF user.userslug -->
                                 <!-- ENDIF !isSelf -->
 
+                                <!-- IF !invited-->
                                 <!-- IF deletable -->
                                     <button component="invite/edit" class="btn btn-sm btn-link edit" type="button" title="[[topic:edit]]"><i class="fa fa-pencil"></i><span class="hidden-xs-inline"> [[topic:edit]]</span></button>
                                     <button component="invite/delete" class="btn btn-sm btn-link delete" type="button" title="[[topic:delete]]"><i class="fa fa-trash-o"></i><span class="hidden-xs-inline"> [[topic:delete]]</span></button>
-                                    <button component="invite/purge" class="btn btn-sm btn-link purge <!-- IF !deleted -->hidden<!-- ENDIF !deleted -->" type="button" title="[[topic:purge]]"><i class="fa fa-eraser"></i><span class="hidden-xs-inline"> [[topic:purge]]</span></button>
                                 <!-- ENDIF deletable -->
+                                <!-- ENDIF !invited-->
                             </span>
                         </div>
                     </div>
