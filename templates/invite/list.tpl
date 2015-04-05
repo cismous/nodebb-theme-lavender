@@ -51,7 +51,11 @@
                             <!-- IF invite.joined -->
                             <p class="no-replies">[[invite:list.joined]]</p>
                             <!-- ELSE -->
-                            <p class="no-replies">[[invite:list.no_joined]]</p>
+                            <!-- IF invite.invited -->
+                            <p class="no-replies">[[invite:list.invited]]</p>
+                            <!-- ELSE -->
+                            <p class="no-replies">[[invite:list.voting]]</p>
+                            <!-- ENDIF invite.invited -->
                             <!-- ENDIF invite.joined -->
                         </div>
                     </div>
