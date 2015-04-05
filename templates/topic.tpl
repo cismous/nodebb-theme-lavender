@@ -1,6 +1,8 @@
 <div class="topic">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
+	<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted -->">[[topic:deleted_message]]</div>
+
 	<ul component="topic" id="post-container" class="posts" data-tid="{tid}">
 		<!-- BEGIN posts -->
 			<li component="post" class="post-row <!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
@@ -25,22 +27,12 @@
 									</div>
 									<!-- ENDIF posts.user.banned -->
 
-									<!-- IF posts.user.groups.length -->
-									<div class="text-center">
-									<!-- BEGIN groups -->
-									<!-- IF groups.selected -->
-									<!-- IF groups.userTitleEnabled -->
-									<a href="{relative_path}/groups/{posts.user.groups.slug}"><span class="label group-label inline-block" style="background-color: {posts.user.groups.labelColor};"><!-- IF posts.user.groups.icon --><i class="fa {posts.user.groups.icon}"></i> <!-- ENDIF posts.user.groups.icon -->{posts.user.groups.userTitle}</span></a><br/>
-									<!-- ENDIF groups.userTitleEnabled -->
-									<!-- ENDIF groups.selected -->
-									<!-- END groups -->
-									</div>
-									<!-- ENDIF posts.user.groups.length -->
+									<!-- IMPORT partials/topic/badge.tpl -->
 								</div>
 								<div class="topic-text">
 									<!-- IF @first -->
 									<h3 class="topic-title">
-										<p component="post/header" class="topic-title" itemprop="name"><i class="fa fa-thumb-tack hide"></i> <i class="fa fa-lock hide"></i> {title}</p>
+										<p component="post/header" class="topic-title" itemprop="name"><i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> {title}</p>
 										<hr>
 									</h3>
 									<!-- ENDIF @first -->
@@ -81,22 +73,17 @@
 									<ul class="dropdown-menu" role="menu" aria-labelledby="postMenu_{posts.pid}">
 										<li role="presentation">
 											<!-- IF !posts.index -->
-											<!-- IF isFollowing -->
-											<a component="topic/follow" href="#" role="menuitem" tabindex="-1" class="follow" title="[[topic:unwatch.title]]"><span>[[topic:unwatch]]</span> <i class="fa fa-eye-slash"></i></a>
-											<!-- ELSE -->
-											<a component="topic/follow" href="#" role="menuitem" tabindex="-1" class="follow" title="[[topic:watch.title]]"><span>[[topic:watch]]</span> <i class="fa fa-eye"></i></a>
-											<!-- ENDIF isFollowing -->
+											<a component="topic/follow" href="#" role="menuitem" tabindex="-1" class="<!-- IF isFollowing -->hidden<!-- ENDIF isFollowing -->" title="[[topic:watch.title]]"><span>[[topic:watch]]</span> <i class="fa fa-eye"></i></a>
+											<a component="topic/unfollow" href="#" role="menuitem" tabindex="-1" class="<!-- IF !isFollowing -->hidden<!-- ENDIF !isFollowing -->" title="[[topic:unwatch.title]]"><span>[[topic:unwatch]]</span> <i class="fa fa-eye-slash"></i></a>
 											<!-- ENDIF !posts.index -->
 										</li>
 										<li role="presentation">
 											<a component="post/favourite" role="menuitem" tabindex="-1" data-favourited="{posts.favourited}" class="favourite">
 												<span class="favourite-text">[[topic:favourite]]</span>
 												<span component="post/favourite-count" class="favouriteCount" data-favourites="{posts.reputation}">{posts.reputation}</span>&nbsp;
-												<!-- IF posts.favourited -->
-												<i class="fa fa-heart"></i>
-												<!-- ELSE -->
-												<i class="fa fa-heart-o"></i>
-												<!-- ENDIF posts.favourited -->
+
+												<i component="post/favourite/on" class="fa fa-heart <!-- IF !posts.favourited -->hidden<!-- ENDIF !posts.favourited -->"></i>
+												<i component="post/favourite/off" class="fa fa-heart-o <!-- IF posts.favourited -->hidden<!-- ENDIF posts.favourited -->"></i>
 											</a>
 										</li>
 										<!-- IF !config.disableSocialButtons -->
@@ -145,21 +132,22 @@
 									<!-- ENDIF loggedIn -->
 									<!-- ENDIF posts.user.userslug -->
 									<!-- ENDIF !posts.selfPost -->
-									<!-- IF privileges.topics:reply -->
-									<button component="post/quote" class="btn btn-sm btn-link quote" type="button" title="[[topic:quote]]"><i class="fa fa-quote-left"></i><span class="hidden-xs-inline"> [[topic:quote]]</span></button>
-									<button component="post/reply" class="btn btn-sm btn-link post_reply" type="button"><i class="fa fa-reply"></i><span class="hidden-xs-inline"> [[topic:reply]]</span></button>
-									<!-- ENDIF privileges.topics:reply -->
+
+									<button component="post/quote" class="btn btn-sm btn-link <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->" type="button" title="[[topic:quote]]"><i class="fa fa-quote-left"></i><span class="hidden-xs-inline"> [[topic:quote]]</span></button>
+									<button component="post/reply" class="btn btn-sm btn-link <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->" type="button"><i class="fa fa-reply"></i><span class="hidden-xs-inline"> [[topic:reply]]</span></button>
+
 									<!-- IF !posts.selfPost -->
 									<!-- IF loggedIn -->
-									<button component="post/flag" class="btn btn-sm btn-link flag" type="button" title="[[topic:flag_title]]"><i class="fa fa-flag-o"></i><span class="hidden-xs-inline"> [[topic:flag]]</span></button>
+									<button component="post/flag" class="btn btn-sm btn-link" type="button" title="[[topic:flag_title]]"><i class="fa fa-flag-o"></i><span class="hidden-xs-inline"> [[topic:flag]]</span></button>
 									<!-- ENDIF loggedIn -->
 									<!-- ENDIF !posts.selfPost -->
 									<!-- IF posts.display_moderator_tools -->
-										<button component="post/edit" class="btn btn-sm btn-link edit" type="button" title="[[topic:edit]]"><i class="fa fa-pencil"></i><span class="hidden-xs-inline"> [[topic:edit]]</span></button>
-										<button component="post/delete" class="btn btn-sm btn-link delete" type="button" title="[[topic:delete]]"><i class="fa fa-trash-o"></i><span class="hidden-xs-inline"> [[topic:delete]]</span></button>
-										<button component="post/purge" class="btn btn-sm btn-link purge <!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->" type="button" title="[[topic:purge]]"><i class="fa fa-eraser"></i><span class="hidden-xs-inline"> [[topic:purge]]</span></button>
+										<button component="post/edit" class="btn btn-sm btn-link" type="button" title="[[topic:edit]]"><i class="fa fa-pencil"></i><span class="hidden-xs-inline"> [[topic:edit]]</span></button>
+										<button component="post/delete" class="btn btn-sm btn-link <!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->" type="button" title="[[topic:delete]]"><i class="fa fa-trash-o"></i><span class="hidden-xs-inline"> [[topic:delete]]</span></button>
+										<button component="post/restore" class="btn btn-sm btn-link <!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->" type="button" title="[[topic:restore]]"><i class="fa fa-history"></i><span class="hidden-xs-inline"> [[topic:restore]]</span></button>
+										<button component="post/purge" class="btn btn-sm btn-link <!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->" type="button" title="[[topic:purge]]"><i class="fa fa-eraser"></i><span class="hidden-xs-inline"> [[topic:purge]]</span></button>
 										<!-- IF posts.display_move_tools -->
-											<button component="post/move" class="btn btn-sm btn-link move" type="button" title="[[topic:move]]"><i class="fa fa-arrows"></i><span class="hidden-xs-inline"> [[topic:move]]</span></button>
+											<button component="post/move" class="btn btn-sm btn-link" type="button" title="[[topic:move]]"><i class="fa fa-arrows"></i><span class="hidden-xs-inline"> [[topic:move]]</span></button>
 										<!-- ENDIF posts.display_move_tools -->
 									<!-- ENDIF posts.display_moderator_tools -->
 								</span>
@@ -177,7 +165,7 @@
 		<!-- END posts -->
 	</ul>
 
-	<div class="post-bar col-xs-12 <!-- IF unreplied -->hide<!-- ENDIF unreplied --> bottom-post-bar">
+	<div class="post-bar col-xs-12 <!-- IF unreplied -->hidden<!-- ENDIF unreplied --> bottom-post-bar">
 		<!-- IMPORT partials/post_bar.tpl -->
 	</div>
 
