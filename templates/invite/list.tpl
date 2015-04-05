@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <div class="col-xs-1 category-stat hidden-xs">
-                            <strong class="human-readable-number" title="{invite.invitecount}">{invite.invitecount}</strong><br />
+                            <strong class="human-readable-number" title="{invite.inviteCount}">{invite.inviteCount}</strong><br />
                             <small>[[invite:invite_count]]</small>
                         </div>
                         <div class="col-xs-1 category-stat hidden-xs">

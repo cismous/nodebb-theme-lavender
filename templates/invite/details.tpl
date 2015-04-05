@@ -34,12 +34,12 @@
                                 <!-- IF invited-->
                                 <hr>
                                 <div class="invited">
-                                    <span class="time">{invitedTime}</span><span>: [[invite:email.invited]]</span>
+                                    <span class="time">{invitedTime}</span><span>：[[invite:email.invited]]</span>
                                 </div>
                                 <!-- ENDIF invited-->
                                 <!-- IF joined-->
                                 <div class="joined">
-                                    <span class="time">{joinedTime}</span><span>: [[invite:email.joined]]</span>
+                                    <span class="time">{joinedTime}</span><span>：[[invite:email.joined]]</span>
                                 </div>
                                 <!-- ENDIF joined-->
                             </div>
@@ -69,7 +69,7 @@
                             </small>
 
                             <!-- IF !reputation:disabled -->
-                            <button component="invite/upvote" class="btn btn-primary<!-- IF invited--> btn-danger<!-- ENDIF invited--><!-- IF joined--> btn-success active<!-- ENDIF joined-->" type="button">[[global:header.invite]] <span component="invite/vote-count" class="badge votes" data-votes="inviteCount">{inviteCount}</span></button>
+                            <button component="invite/upvote" class="btn btn-primary<!-- IF joined--> btn-success active<!-- ELSE --><!-- IF invited--> btn-danger<!-- ENDIF invited--><!-- ENDIF joined-->" type="button">[[global:header.invite]] <span component="invite/vote-count" class="badge votes" data-votes="inviteCount">{inviteCount}</span></button>
                             <!-- ENDIF !reputation:disabled -->
 
                             <span class="post-tools">
