@@ -69,7 +69,7 @@
                             </small>
 
                             <!-- IF !reputation:disabled -->
-                            <button component="invite/upvote" class="btn btn-primary<!-- IF invited--> btn-success active<!-- ENDIF invited-->" type="button">[[global:header.invite]] <span component="invite/vote-count" class="badge votes" data-votes="inviteCount">{inviteCount}</span></button>
+                            <button component="invite/upvote" class="btn btn-primary<!-- IF invited--> btn-danger<!-- ENDIF invited--><!-- IF joined--> btn-success active<!-- ENDIF joined-->" type="button">[[global:header.invite]] <span component="invite/vote-count" class="badge votes" data-votes="inviteCount">{inviteCount}</span></button>
                             <!-- ENDIF !reputation:disabled -->
 
                             <span class="post-tools">
