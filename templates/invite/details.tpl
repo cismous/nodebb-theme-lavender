@@ -25,18 +25,21 @@
                                 </div>
                                 <!-- ENDIF user.banned -->
                             </div>
-                            <div class="topic-text">
-                                <h3 class="topic-title" style="display: block;">
-                                    <span component="invite/header" class="topic-title" itemprop="name" style="display: block;"><i class="fa fa-thumb-tack hide"></i> <i class="fa fa-lock hide"></i> {username}</span>
-                                </h3>
+                            <div class="invite-text">
+                                <div class="invite-username">
+                                    <span>提名人: </span><span component="invite/username" class="invite-username" itemprop="name">{username}</span>
+                                </div>
                                 <hr>
                                 <!-- IF isSelf -->
-                                <h3 class="invite-email">
-                                    <span component="invite/email" class="invite-email" itemprop="email" style="display: block;">{email}</span>
-                                </h3>
+                                <div class="invite-email">
+                                    <span>提名人邮箱: </span><span component="invite/email" class="invite-email" itemprop="email">{email}</span>
+                                </div>
                                 <hr>
                                 <!-- ENDIF isSelf -->
-                                <div component="invite/content" class="post-content" itemprop="text">{content}</div>
+                                <div class="invite-reason">
+                                    <div>题名理由: </div>
+                                    <div component="invite/content" class="post-content" itemprop="text">{content}</div>
+                                </div>
                                 <!-- IF invited-->
                                 <hr>
                                 <div class="invited">
@@ -44,9 +47,7 @@
                                 </div>
                                 <!-- ENDIF invited-->
                                 <!-- IF joined-->
-                                <div class="joined">
-                                    <span class="time">{joinedTime}</span><span>：[[invite:email.joined]]</span>
-                                </div>
+                                <div class="joined">该用户已于某时接受邀请进入社区</div>
                                 <!-- ENDIF joined-->
                             </div>
                         </div>
@@ -75,7 +76,7 @@
                             </small>
 
                             <!-- IF !reputation:disabled -->
-                            <button component="invite/upvote" class="btn btn-primary<!-- IF joined--> btn-success active<!-- ELSE --><!-- IF invited--> btn-danger<!-- ENDIF invited--><!-- ENDIF joined-->" type="button">[[global:header.invite]] <span component="invite/vote-count" class="badge votes" data-votes="inviteCount">{inviteCount}</span></button>
+                            <button component="invite/upvote" class="btn btn-primary<!-- IF joined--> btn-success active<!-- ELSE --><!-- IF invited--> btn-danger<!-- ENDIF invited--><!-- ENDIF joined-->" type="button">[[invite:detail.upvote]] <span component="invite/vote-count" class="badge votes" data-votes="inviteCount">{inviteCount}</span></button>
                             <!-- ENDIF !reputation:disabled -->
 
                             <span class="post-tools">

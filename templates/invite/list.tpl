@@ -3,7 +3,7 @@
 <div class="category row">
     <div class="{invite_row_size}" no-widget-class="col-lg-12 col-sm-12" no-widget-target="sidebar">
         <div class="header clearfix">
-            <button id="new_invite" class="btn btn-primary">[[invite_list:new_invite_button]]</button>
+            <button id="new_invite" class="btn btn-primary">[[invite:list.new]]</button>
 
 			<span class="pull-right">
 				<button type="button" class="btn btn-default btn-success watch <!-- IF !isIgnored -->hidden<!-- ENDIF !isIgnored -->"><i class="fa fa-eye"></i> [[topic:watch]]</button>
@@ -13,7 +13,7 @@
 
         <!-- IF !invite.length -->
         <div class="alert alert-warning">
-            [[invite_list:no_invite]]
+            [[invite:list.no_invite]]
         </div>
         <!-- ENDIF !invite.length -->
 

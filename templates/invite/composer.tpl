@@ -11,18 +11,18 @@
         </nav>
 
         <div class="form-group">
-            <label for="username" class="control-label">[[invite:composer.invite_username]]</label>
+            <label for="username" class="control-label hide">[[invite:composer.type_username]]</label>
             <input class="form-control" type="text" placeholder="[[invite:composer.type_username]]" name="username" id="username" autocorrect="off" autocapitalize="off"/>
         </div>
 
         <div class="form-group">
-            <label for="email" class="control-label">[[invite:composer.invite_email]]</label>
+            <label for="email" class="control-label hide">[[invite:composer.type_email]]</label>
             <input class="form-control" type="text" placeholder="[[invite:composer.type_email]]" name="email" id="email" autocorrect="off" autocapitalize="off"/>
         </div>
 
         <div class="row category-tag-row">
             <div class="btn-toolbar formatting-bar">
-                <div class="invite-reason">[[invite:composer.invite_reason]]</div>
+                <div class="invite-reason hide">[[invite:composer.invite_reason]]</div>
                 <div class="btn-group">
                     <!-- BEGIN formatting -->
                     <!-- IF formatting.spacer -->
