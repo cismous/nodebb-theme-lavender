@@ -27,23 +27,23 @@
                             </div>
                             <div class="invite-text">
                                 <div class="invite-username">
-                                    <span>提名人: </span><span component="invite/username" class="invite-username" itemprop="name">{username}</span>
+                                    <span>提名人： </span><span component="invite/username" class="invite-username" itemprop="name">{username}</span>
                                 </div>
                                 <hr>
                                 <!-- IF isSelf -->
                                 <div class="invite-email">
-                                    <span>提名人邮箱: </span><span component="invite/email" class="invite-email" itemprop="email">{email}</span>
+                                    <span>提名人邮箱： </span><span component="invite/email" class="invite-email" itemprop="email">{email}</span>
                                 </div>
                                 <hr>
                                 <!-- ENDIF isSelf -->
                                 <div class="invite-reason" component="invite/reason" >
-                                    <div>题名理由: </div>
-                                    <div component="invite/content" class="post-content" itemprop="text">{content}</div>
+                                    <span>题名理由: </span>
+                                    <span component="invite/content" class="post-content" itemprop="text">{content}</span>
                                 </div>
                                 <!-- IF invited-->
                                 <hr>
                                 <div class="invited">
-                                    <span class="time">{invitedTime}</span><span>：[[invite:email.invited]]</span>
+                                    <span class="time">{invitedTime}</span><span> [[invite:email.invited]]</span>
                                 </div>
                                 <!-- ENDIF invited-->
                                 <!-- IF joined-->
