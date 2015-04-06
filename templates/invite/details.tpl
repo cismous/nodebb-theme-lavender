@@ -36,7 +36,7 @@
                                 </div>
                                 <hr>
                                 <!-- ENDIF isSelf -->
-                                <div class="invite-reason">
+                                <div class="invite-reason" component="invite/reason" >
                                     <div>题名理由: </div>
                                     <div component="invite/content" class="post-content" itemprop="text">{content}</div>
                                 </div>
