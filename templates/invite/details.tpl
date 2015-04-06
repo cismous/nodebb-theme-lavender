@@ -30,6 +30,12 @@
                                     <span component="invite/header" class="topic-title" itemprop="name" style="display: block;"><i class="fa fa-thumb-tack hide"></i> <i class="fa fa-lock hide"></i> {username}</span>
                                 </h3>
                                 <hr>
+                                <!-- IF isSelf -->
+                                <h3 class="invite-email">
+                                    <span component="invite/email" class="invite-email" itemprop="email" style="display: block;">{email}</span>
+                                </h3>
+                                <hr>
+                                <!-- ENDIF isSelf -->
                                 <div component="invite/content" class="post-content" itemprop="text">{content}</div>
                                 <!-- IF invited-->
                                 <hr>
