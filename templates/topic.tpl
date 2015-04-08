@@ -66,44 +66,6 @@
 									<!-- ENDIF posts.editor.username -->
 								</small>
 
-								<div class="dropdown share-dropdown">
-									<a href="#" class="dropdown-toggle postMenu favourite-tooltip" id="postMenu_{posts.pid}" data-toggle="dropdown">
-										<i class="fa fa-heart"></i>
-									</a>
-									<ul class="dropdown-menu" role="menu" aria-labelledby="postMenu_{posts.pid}">
-										<li role="presentation">
-											<!-- IF !posts.index -->
-											<a component="topic/follow" href="#" role="menuitem" tabindex="-1" class="<!-- IF isFollowing -->hidden<!-- ENDIF isFollowing -->" title="[[topic:watch.title]]"><span>[[topic:watch]]</span> <i class="fa fa-eye"></i></a>
-											<a component="topic/unfollow" href="#" role="menuitem" tabindex="-1" class="<!-- IF !isFollowing -->hidden<!-- ENDIF !isFollowing -->" title="[[topic:unwatch.title]]"><span>[[topic:unwatch]]</span> <i class="fa fa-eye-slash"></i></a>
-											<!-- ENDIF !posts.index -->
-										</li>
-										<li role="presentation">
-											<a component="post/favourite" role="menuitem" tabindex="-1" data-favourited="{posts.favourited}" class="favourite">
-												<span class="favourite-text">[[topic:favourite]]</span>
-												<span component="post/favourite-count" class="favouriteCount" data-favourites="{posts.reputation}">{posts.reputation}</span>&nbsp;
-
-												<i component="post/favourite/on" class="fa fa-heart <!-- IF !posts.favourited -->hidden<!-- ENDIF !posts.favourited -->"></i>
-												<i component="post/favourite/off" class="fa fa-heart-o <!-- IF posts.favourited -->hidden<!-- ENDIF posts.favourited -->"></i>
-											</a>
-										</li>
-										<!-- IF !config.disableSocialButtons -->
-										<li role="presentation" class="divider"></li>
-										<li role="presentation" class="dropdown-header">[[topic:share_this_post]]</li>
-										<li role="presentation">
-											<a role="menuitem" class="facebook-share" tabindex="-1" href="#"><span class="menu-icon"><i class="fa fa-facebook"></i></span> Facebook</a>
-										</li>
-										<li role="presentation">
-											<a role="menuitem" class="twitter-share" tabindex="-1" href="#"><span class="menu-icon"><i class="fa fa-twitter"></i></span> Twitter</a>
-										</li>
-										<li role="presentation">
-											<a role="menuitem" class="google-share" tabindex="-1" href="#"><span class="menu-icon"><i class="fa fa-google-plus"></i></span> Google+</a>
-										</li>
-										<!-- ENDIF !config.disableSocialButtons -->
-										<li class="text-center">
-											<input type="text" id="post_{posts.pid}_link" value="" class="form-control post-link inline-block"></input>
-										</li>
-									</ul>
-								</div>
 								<!-- IF !reputation:disabled -->
 								&bull;
 								<a component="post/upvote" href="#" class="upvote<!-- IF posts.upvoted --> upvoted<!-- ENDIF posts.upvoted -->">
