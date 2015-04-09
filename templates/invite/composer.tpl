@@ -1,5 +1,4 @@
 <div class="composer invite-composer">
-
     <div class="composer-container">
         <nav class="navbar navbar-fixed-top mobile-navbar visible-xs visible-sm">
 			<span class="pull-left">
@@ -10,12 +9,12 @@
 			</span>
         </nav>
 
-        <div class="form-group">
+        <div class="username-container form-group">
             <label for="username" class="control-label hide">[[invite:composer.type_username]]</label>
             <input class="form-control" type="text" placeholder="[[invite:composer.type_username]]" name="username" id="username" autocorrect="off" autocapitalize="off"/>
         </div>
 
-        <div class="form-group">
+        <div class="email-container form-group">
             <label for="email" class="control-label hide">[[invite:composer.type_email]]</label>
             <input class="form-control" type="text" placeholder="[[invite:composer.type_email]]" name="email" id="email" autocorrect="off" autocapitalize="off"/>
         </div>
