@@ -22,11 +22,6 @@
 			<div class="well">
 				<div class="checkbox">
 					<label>
-						<input type="checkbox" data-property="showfullname" /> <strong>[[user:show_fullname]]</strong>
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
 						<input type="checkbox" data-property="restrictChat" /> <strong>[[user:restrict_chats]]</strong>
 					</label>
 				</div>

@@ -130,15 +130,6 @@
 						</ul>
 					</li>
 				</ul>
-				<!-- ELSE -->
-				<ul id="logged-out-menu" class="nav navbar-nav navbar-right pull-right">
-					<li>
-						<a href="{relative_path}/login">
-							<i class="fa fa-sign-in visible-xs-inline"></i>
-							<span>[[global:login]]</span>
-						</a>
-					</li>
-				</ul>
 				<!-- ENDIF loggedIn -->
 				<!-- IF searchEnabled -->
 				<ul class="nav navbar-nav navbar-right">

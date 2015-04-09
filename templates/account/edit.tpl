@@ -41,43 +41,6 @@
 
 					</div>
 
-					<div class="control-group">
-						<label class="control-label" for="inputFullname">[[user:fullname]]</label>
-						<div class="controls">
-							<input class="form-control" type="text" id="inputFullname" placeholder="[[user:fullname]]" value="{fullname}">
-						</div>
-					</div>
-
-					<div class="control-group">
-						<label class="control-label" for="inputWebsite">[[user:website]]</label>
-						<div class="controls">
-							<input class="form-control" type="text" id="inputWebsite" placeholder="http://..." value="{website}">
-						</div>
-					</div>
-
-					<div class="control-group">
-						<label class="control-label" for="inputLocation">[[user:location]]</label>
-						<div class="controls">
-							<input class="form-control" type="text" id="inputLocation" placeholder="[[user:location]]" value="{location}">
-						</div>
-					</div>
-
-					<div class="control-group">
-						<label class="control-label" for="inputBirthday">[[user:birthday]]</label>
-						<div class="controls">
-							<input class="form-control" id="inputBirthday" value="{birthday}" placeholder="yyyy-mm-dd">
-						</div>
-					</div>
-
-					<!-- IF !disableSignatures -->
-					<div class="control-group">
-						<label class="control-label" for="inputSignature">[[user:signature]]</label> <small><label id="signatureCharCountLeft"></label></small>
-						<div class="controls">
-							<textarea class="form-control" id="inputSignature" rows="5">{signature}</textarea>
-						</div>
-					</div>
-					<!-- ENDIF !disableSignatures -->
-
 					<input type="hidden" id="inputUID" value="{uid}"><br />
 
 					<div class="form-actions">

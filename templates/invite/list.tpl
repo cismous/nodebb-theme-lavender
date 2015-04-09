@@ -39,14 +39,6 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-xs-1 category-stat hidden-xs">
-                            <strong class="human-readable-number" title="{invite.inviteCount}">{invite.inviteCount}</strong><br />
-                            <small>[[invite:invite_count]]</small>
-                        </div>
-                        <div class="col-xs-1 category-stat hidden-xs">
-                            <strong class="human-readable-number" title="{invite.viewcount}">{invite.viewcount}</strong><br />
-                            <small>[[global:views]]</small>
-                        </div>
                         <div class="col-xs-2 category-stat replies hidden-sm hidden-xs">
                             <!-- IF invite.joined -->
                             <p class="no-replies">[[invite:list.joined]]</p>
@@ -57,6 +49,14 @@
                             <p class="no-replies">[[invite:list.voting]]</p>
                             <!-- ENDIF invite.invited -->
                             <!-- ENDIF invite.joined -->
+                        </div>
+                        <div class="col-xs-1 category-stat hidden-xs">
+                            <strong class="human-readable-number" title="{invite.inviteCount}">{invite.inviteCount}</strong><br />
+                            <small>[[invite:invite_count]]</small>
+                        </div>
+                        <div class="col-xs-1 category-stat hidden-xs">
+                            <strong class="human-readable-number" title="{invite.viewcount}">{invite.viewcount}</strong><br />
+                            <small>[[global:views]]</small>
                         </div>
                     </div>
                 </div>
