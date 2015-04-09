@@ -61,7 +61,7 @@
                     Compose <span class="help hidden"><i class="fa fa-question-circle"></i></span>
                     <span class="toggle-preview hide">Show Preview</span>
                 </div>
-                <textarea class="write" tabindex="5"></textarea>
+                <textarea class="write" tabindex="5" placeholder="请在这里输入提名理由"></textarea>
             </div>
             <div class="col-md-6 hidden-sm hidden-xs preview-container">
                 <div class="help-text">
