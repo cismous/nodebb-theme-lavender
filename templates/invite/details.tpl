@@ -27,17 +27,17 @@
                             </div>
                             <div class="invite-text">
                                 <div class="invite-username">
-                                    <span>提名人： </span><span component="invite/username" class="invite-username" itemprop="name">{username}</span>
+                                    <span>提名人：</span><span component="invite/username" class="invite-username" itemprop="name">{username}</span>
                                 </div>
                                 <hr>
                                 <!-- IF isSelf -->
                                 <div class="invite-email">
-                                    <span>提名人邮箱： </span><span component="invite/email" class="invite-email" itemprop="email">{email}</span>
+                                    <span>提名人邮箱：</span><span component="invite/email" class="invite-email" itemprop="email">{email}</span>
                                 </div>
                                 <hr>
                                 <!-- ENDIF isSelf -->
                                 <div class="invite-reason" component="invite/reason" >
-                                    <span>题名理由: </span>
+                                    <span>题名理由：</span>
                                     <span component="invite/content" class="post-content" itemprop="text">{content}</span>
                                 </div>
                                 <!-- IF invited-->
