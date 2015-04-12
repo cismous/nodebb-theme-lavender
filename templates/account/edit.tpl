@@ -60,7 +60,7 @@
 					<div class="control-group">
 						<label class="control-label" for="inputCurrentPassword">[[user:current_password]]</label>
 						<div class="controls">
-                            <input autocomplete="off" class="form-control" type="password" id="inputCurrentPassword" placeholder="[[user:current_password]]" value=""<!-- IF !hasPassword --> disabled<!-- ENDIF !hasPassword-->>
+							<input class="form-control" type="password" id="inputCurrentPassword" placeholder="[[user:current_password]]" value=""<!-- IF !hasPassword --> disabled<!-- ENDIF !hasPassword-->>
 						</div>
 					</div>
 					<!-- ENDIF isSelf -->
@@ -73,6 +73,7 @@
 								<span id="password-notify"><i class="fa fa-circle-o"></i></span>
 							</span>
 						</div>
+                        <span class="help-block">[[register:help.minimum_password_length, {minimumPasswordLength}]]</span>
 					</div>
 
 					<div class="control-group">
