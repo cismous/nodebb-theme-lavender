@@ -32,7 +32,7 @@
 								<div class="topic-text">
 									<!-- IF @first -->
 									<h3 class="topic-title">
-										<p component="post/header" class="topic-title" itemprop="name"><i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> {title}</p>
+										<p component="post/header" class="topic-title" itemprop="name"><i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span component="topic/title">{title}</span></p>
 										<hr>
 									</h3>
 									<!-- ENDIF @first -->
@@ -50,9 +50,9 @@
 								<small class="pull-right">
 									<span>
 										<!-- IF posts.user.userslug -->
-										<i class="fa fa-circle status {posts.user.status}" title='[[global:{posts.user.status}]]'></i>
+										<i component="user/status" class="fa fa-circle status {posts.user.status}" title='[[global:{posts.user.status}]]'></i>
 										<!-- ENDIF posts.user.userslug -->
-										<span class="username-field" data-username="{posts.user.username}" data-uid="{posts.user.uid}">
+										<span data-username="{posts.user.username}" data-uid="{posts.user.uid}">
 											<!-- IF posts.user.userslug -->
 											[[global:user_posted_ago, <strong><a href="{relative_path}/user/{posts.user.userslug}" itemprop="author">{posts.user.username}</a></strong>, <span class="timeago" title="{posts.relativeTime}"></span>]]
 											<!-- ELSE -->
@@ -65,6 +65,13 @@
 									<span>, [[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</span>
 									<!-- ENDIF posts.editor.username -->
 								</small>
+
+								<div class="dropdown moderator-tools" component="post/tools">
+									<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-gear"></i></a>
+									<ul class="dropdown-menu" role="menu">
+										<!-- IMPORT partials/topic/post-menu.tpl -->
+									</ul>
+								</div>
 
 								<!-- IF !reputation:disabled -->
 								&bull;
@@ -97,21 +104,6 @@
 
 									<button component="post/quote" class="btn btn-sm btn-link <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->" type="button" title="[[topic:quote]]"><i class="fa fa-quote-left"></i><span class="hidden-xs-inline"> [[topic:quote]]</span></button>
 									<button component="post/reply" class="btn btn-sm btn-link <!-- IF !privileges.topics:reply -->hidden<!--ENDIF !privileges.topics:reply -->" type="button"><i class="fa fa-reply"></i><span class="hidden-xs-inline"> [[topic:reply]]</span></button>
-
-									<!-- IF !posts.selfPost -->
-									<!-- IF loggedIn -->
-									<button component="post/flag" class="btn btn-sm btn-link" type="button" title="[[topic:flag_title]]"><i class="fa fa-flag-o"></i><span class="hidden-xs-inline"> [[topic:flag]]</span></button>
-									<!-- ENDIF loggedIn -->
-									<!-- ENDIF !posts.selfPost -->
-									<!-- IF posts.display_moderator_tools -->
-										<button component="post/edit" class="btn btn-sm btn-link" type="button" title="[[topic:edit]]"><i class="fa fa-pencil"></i><span class="hidden-xs-inline"> [[topic:edit]]</span></button>
-										<button component="post/delete" class="btn btn-sm btn-link <!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->" type="button" title="[[topic:delete]]"><i class="fa fa-trash-o"></i><span class="hidden-xs-inline"> [[topic:delete]]</span></button>
-										<button component="post/restore" class="btn btn-sm btn-link <!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->" type="button" title="[[topic:restore]]"><i class="fa fa-history"></i><span class="hidden-xs-inline"> [[topic:restore]]</span></button>
-										<button component="post/purge" class="btn btn-sm btn-link <!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->" type="button" title="[[topic:purge]]"><i class="fa fa-eraser"></i><span class="hidden-xs-inline"> [[topic:purge]]</span></button>
-										<!-- IF posts.display_move_tools -->
-											<button component="post/move" class="btn btn-sm btn-link" type="button" title="[[topic:move]]"><i class="fa fa-arrows"></i><span class="hidden-xs-inline"> [[topic:move]]</span></button>
-										<!-- ENDIF posts.display_move_tools -->
-									<!-- ENDIF posts.display_moderator_tools -->
 								</span>
 							</div>
 						</div>

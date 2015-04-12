@@ -33,7 +33,7 @@
                                     <!-- ENDIF isSelf -->
                                 </div>
                                 <hr>
-                                <div class="invite-reason" component="invite/reason">
+                                <div class="invite-reason" component="invite/reason" >
                                     <span>题名理由：</span>
                                     <span component="invite/content" class="post-content" itemprop="text">{content}</span>
                                 </div>
@@ -64,9 +64,9 @@
                             <small class="pull-right">
                                 <span>
                                     <!-- IF user.userslug -->
-                                    <i class="fa fa-circle status {user.status}" title='[[global:{user.status}]]'></i>
+                                    <i component="user/status" class="fa fa-circle status {user.status}" title='[[global:{posts.user.status}]]'></i>
                                     <!-- ENDIF user.userslug -->
-                                    <span class="username-field" data-username="{user.username}" data-uid="{user.uid}">
+                                    <span data-username="{posts.user.username}" data-uid="{user.uid}">
                                         <!-- IF user.userslug -->
                                         [[global:user_posted_ago, <strong><a href="{relative_path}/user/{user.userslug}" itemprop="author">{user.username}</a></strong>, <span class="timeago" title="{relativeTime}"></span>]]
                                         <!-- ELSE -->
