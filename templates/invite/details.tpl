@@ -33,13 +33,13 @@
                                     <!-- ENDIF isSelf -->
                                 </div>
                                 <hr>
-                                <div class="invite-reason" component="invite/reason" >
+                                <div class="invite-reason" component="invite/reason">
                                     <span>题名理由：</span>
                                     <span component="invite/content" class="post-content" itemprop="text">{content}</span>
                                 </div>
+                                <hr>
 
                                 <!-- IF invited -->
-                                <hr>
                                 <div class="small-text invited">
                                     <span class="time">{invitedTime}</span> <span>票数 {inviteCount}，达到邀请数量，邀请邮件已经发出</span>
                                 </div>
@@ -80,9 +80,11 @@
                                 <!-- ENDIF editor.username -->
                             </small>
 
-                            <!-- IF !invited-->
+                            <!-- IF !invited -->
+                            <!-- IF !invitedByMe -->
                             <button component="invite/upvote" class="btn btn-primary<!-- IF joined--> btn-success active<!-- ELSE --><!-- IF invited--> btn-danger<!-- ENDIF invited--><!-- ENDIF joined-->" type="button">[[invite:detail.upvote]] <span component="invite/vote-count" class="badge votes" data-votes="inviteCount">{inviteCount}</span></button>
-                            <!-- ENDIF !invited-->
+                            <!-- ENDIF !invitedByMe -->
+                            <!-- ENDIF !invited -->
 
                             <span class="post-tools">
                                 <!-- IF !isSelf -->
