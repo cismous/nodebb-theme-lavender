@@ -37,10 +37,13 @@
                         <!-- IF !isSelf -->
                         <div class="text-center">
                             <!-- IF inviterText -->
-                            <span>[[{inviterText}, {username}]]</span>
+                            <span>{inviterText}</span>
                             <!-- ENDIF inviterText -->
+
+                            <!-- IF inviterText --><!-- IF voteText -->，<!-- ENDIF voteText --><!-- ENDIF inviterText -->
+
                             <!-- IF voteText -->
-                            <span>, [[{voteText}, {username}]]</span>
+                            <span> {voteText}</span>
                             <!-- ENDIF voteText -->
                         </div>
                         <!-- ENDIF !isSelf -->
@@ -95,7 +98,7 @@
                     <span class="human-readable-number account-bio-value" title="{followingCount}">{followingCount}</span>
 
                     <span class="account-bio-label">[[invite:account.joined]]</span>
-                    <span class="timeago account-bio-value" title="{joindate}"></span>
+                    <span class="account-bio-value" title="{joindate}">{joindateText}</span>
 
                     <span class="account-bio-label">[[user:lastonline]]</span>
                     <span class="timeago account-bio-value" title="{lastonline}"></span>
@@ -146,14 +149,11 @@
                     <div class="user-post clearfix" data-pid="{posts.pid}">
                         <div class="content">
                             <p>{posts.content}</p>
-
                             <p class="fade-out"></p>
                         </div>
                         <small>
 							<span class="pull-right post-preview-footer">
-								[[global:posted_in_ago, <a href="{relative_path}/category/{posts.category.slug}"><i
-                                    class="fa {posts.category.icon}"></i> {posts.category.name}</a>, <span class="timeago"
-                                                                                                           title="{posts.relativeTime}"></span>]] &bull;
+								[[global:posted_in_ago, <a href="{relative_path}/category/{posts.category.slug}"><i class="fa {posts.category.icon}"></i> {posts.category.name}</a>, <span class="timeago" title="{posts.relativeTime}"></span>]] &bull;
                                 <a href="{relative_path}/topic/{posts.topic.slug}/{posts.index}">[[global:read_more]]</a>
 							</span>
                         </small>
@@ -170,7 +170,6 @@
     </div>
 
     <br/>
-
     <div id="user-action-alert" class="alert alert-success hide"></div>
 
 </div>
