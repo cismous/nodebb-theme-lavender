@@ -35,12 +35,14 @@
                         <!-- ENDIF banned -->
                         <hr/>
                         <!-- IF !isSelf -->
-                        <!-- IF inviterText -->
                         <div class="text-center">
-                            <span>{username}</span>
-                            <span>[[{inviterText}]]</span>
+                            <!-- IF inviterText -->
+                            <span>[[{inviterText}, {username}]]</span>
+                            <!-- ENDIF inviterText -->
+                            <!-- IF voteText -->
+                            <span>, [[{voteText}, {username}]]</span>
+                            <!-- ENDIF voteText -->
                         </div>
-                        <!-- ENDIF inviterText -->
                         <!-- ENDIF !isSelf -->
                         <div class="text-center account-stats">
 

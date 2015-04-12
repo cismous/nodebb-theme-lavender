@@ -26,29 +26,34 @@
                                 <!-- ENDIF user.banned -->
                             </div>
                             <div class="invite-text">
-                                <div class="invite-username">
-                                    <span>提名人：</span><span component="invite/username" class="invite-username" itemprop="name">{username}</span>
+                                <div class="invite-user">
+                                    <span class="invite-username-text">提名人：</span><span component="invite/username" class="invite-username" itemprop="name">{username}</span>
+                                    <!-- IF isSelf -->
+                                    <span class="invite-email-text">提名人邮箱：</span><span component="invite/email" class="invite-email" itemprop="email">{email}</span>
+                                    <!-- ENDIF isSelf -->
                                 </div>
                                 <hr>
-                                <!-- IF isSelf -->
-                                <div class="invite-email">
-                                    <span>提名人邮箱：</span><span component="invite/email" class="invite-email" itemprop="email">{email}</span>
-                                </div>
-                                <hr>
-                                <!-- ENDIF isSelf -->
                                 <div class="invite-reason" component="invite/reason" >
                                     <span>题名理由：</span>
                                     <span component="invite/content" class="post-content" itemprop="text">{content}</span>
                                 </div>
-                                <!-- IF invited-->
+
+                                <!-- IF invited -->
                                 <hr>
-                                <div class="invited">
-                                    <span class="time">{invitedTime}</span><span> [[invite:email.invited]]</span>
+                                <div class="small-text invited">
+                                    <span class="time">{invitedTime}</span> <span>票数 {inviteCount}，达到邀请数量，邀请邮件已经发出</span>
                                 </div>
-                                <!-- ENDIF invited-->
-                                <!-- IF joined-->
-                                <div class="joined">该用户已于某时接受邀请进入社区</div>
-                                <!-- ENDIF joined-->
+                                <!-- ELSE -->
+                                <div class="small-text count">到目前获得了{inviteCount}票</div>
+                                <!-- ENDIF invited -->
+
+                                <!-- IF joined -->
+                                <div class="small-text joined">该用户已于某时接受邀请进入社区</div>
+                                <!-- ELSE -->
+                                <!-- IF notJoined -->
+                                <div class="small-text not-joined">邀请邮件已经发出五天，被邀请人还没有进入</div>
+                                <!-- ENDIF notJoined -->
+                                <!-- ENDIF joined -->
                             </div>
                         </div>
                     </div>
@@ -75,9 +80,9 @@
                                 <!-- ENDIF editor.username -->
                             </small>
 
-                            <!-- IF !reputation:disabled -->
+                            <!-- IF !invited-->
                             <button component="invite/upvote" class="btn btn-primary<!-- IF joined--> btn-success active<!-- ELSE --><!-- IF invited--> btn-danger<!-- ENDIF invited--><!-- ENDIF joined-->" type="button">[[invite:detail.upvote]] <span component="invite/vote-count" class="badge votes" data-votes="inviteCount">{inviteCount}</span></button>
-                            <!-- ENDIF !reputation:disabled -->
+                            <!-- ENDIF !invited-->
 
                             <span class="post-tools">
                                 <!-- IF !isSelf -->
