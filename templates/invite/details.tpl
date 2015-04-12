@@ -1,5 +1,19 @@
 <div class="topic" id="invite-detail">
-    <!-- IMPORT partials/breadcrumbs.tpl -->
+<ol class="breadcrumb">
+	<!-- BEGIN breadcrumbs -->
+	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb" <!-- IF @last -->class="active"<!-- ENDIF @last -->>
+		<!-- IF !@last --><a href="{breadcrumbs.url}" itemprop="url"><!-- ENDIF !@last -->
+			<span itemprop="title">
+				{breadcrumbs.text}
+				<!-- IF @last -->
+				<!-- IF !feeds:disableRSS -->
+				<!-- IF rssFeedUrl --><a target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square"></i></a><!-- ENDIF rssFeedUrl --><!-- ENDIF !feeds:disableRSS -->
+				<!-- ENDIF @last -->
+			</span>
+		<!-- IF !@last --></a><!-- ENDIF !@last -->
+	</li>
+	<!-- END breadcrumbs -->
+</ol>
 
     <ul component="invite" id="post-container" class="posts" data-iid="{iid}">
         <li class="post-row <!-- IF deleted -->deleted<!-- ENDIF deleted -->"
@@ -39,12 +53,19 @@
                                 </div>
                                 <hr>
 
-                                <!-- IF invited -->
-                                <div class="small-text invited">
-                                    <span class="time">{invitedTime}</span> <span>票数 {inviteCount}，达到邀请数量，邀请邮件已经发出</span>
+                                <!-- IF !invited -->
+                                <!-- IF !invitedByMe -->
+                                <div class="invite-upvote">
+                                    <button component="invite/upvote" class="btn btn-primary<!-- IF joined--> btn-success active<!-- ELSE --><!-- IF invited--> btn-danger<!-- ENDIF invited--><!-- ENDIF joined-->" type="button">[[invite:detail.upvote]]</button>
+                                    <hr>
                                 </div>
-                                <!-- ELSE -->
-                                <div class="small-text count">到目前获得了{inviteCount}票</div>
+                                <!-- ENDIF !invitedByMe -->
+                                <!-- ENDIF !invited -->
+
+                                <div class="small-text count">到目前获得了<span component="invite/vote-count" class="votes" data-votes="inviteCount">{inviteCount}</span>票</div>
+
+                                <!-- IF invited -->
+                                <div class="small-text invited">{invitedTime}，邀请邮件已经发出</div>
                                 <!-- ENDIF invited -->
 
                                 <!-- IF joined -->
@@ -80,12 +101,6 @@
                                 <!-- ENDIF editor.username -->
                             </small>
 
-                            <!-- IF !invited -->
-                            <!-- IF !invitedByMe -->
-                            <button component="invite/upvote" class="btn btn-primary<!-- IF joined--> btn-success active<!-- ELSE --><!-- IF invited--> btn-danger<!-- ENDIF invited--><!-- ENDIF joined-->" type="button">[[invite:detail.upvote]] <span component="invite/vote-count" class="badge votes" data-votes="inviteCount">{inviteCount}</span></button>
-                            <!-- ENDIF !invitedByMe -->
-                            <!-- ENDIF !invited -->
-
                             <span class="post-tools">
                                 <!-- IF !isSelf -->
                                 <!-- IF user.userslug -->
@@ -114,4 +129,14 @@
 
 <div widget-area="footer" class="col-xs-12"></div>
 
-<!-- IMPORT partials/variables/invite.tpl -->
+<input type="hidden" template-variable="invite_id" value="{iid}" />
+<input type="hidden" template-variable="invite_slug" value="{slug}" />
+<input type="hidden" template-variable="currentPage" value="{currentPage}" />
+<input type="hidden" template-variable="locked" template-type="boolean" value="{locked}" />
+<input type="hidden" template-variable="deleted" template-type="boolean" value="{deleted}" />
+<input type="hidden" template-variable="pinned" template-type="boolean" value="{pinned}" />
+<input type="hidden" template-variable="invited" template-type="boolean" value="{invited}" />
+<input type="hidden" template-variable="invite_name" value="{username}" />
+<input type="hidden" template-variable="invitecount" value="{invitecount}" />
+<input type="hidden" template-variable="viewcount" value="{viewcount}" />
+
