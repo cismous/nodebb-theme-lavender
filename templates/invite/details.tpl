@@ -10,7 +10,7 @@
 				<!-- IF rssFeedUrl --><a target="_blank" href="{rssFeedUrl}"><i class="fa fa-rss-square"></i></a><!-- ENDIF rssFeedUrl --><!-- ENDIF !feeds:disableRSS -->
 				<!-- ENDIF @last -->
 			</span>
-		<!-- IF !@last --></a><!-- ENDIF !@last -->
+        <!-- IF !@last --></a><!-- ENDIF !@last -->
         </li>
         <!-- END breadcrumbs -->
     </ol>
@@ -41,14 +41,14 @@
                             </div>
                             <div class="invite-text">
                                 <div class="invite-user">
-                                    <span class="invite-username-text">提名人：</span><span component="invite/username" class="invite-username" itemprop="name">{username}</span>
+                                    <span class="invite-username-text">[[invite:detail.username]]</span><span component="invite/username" class="invite-username" itemprop="name">{username}</span>
                                     <!-- IF isSelf -->
-                                    <span class="invite-email-text">提名人邮箱：</span><span component="invite/email" class="invite-email" itemprop="email">{email}</span>
+                                    <span class="invite-email-text">[[invite:detail.email]]</span><span component="invite/email" class="invite-email" itemprop="email">{email}</span>
                                     <!-- ENDIF isSelf -->
                                 </div>
                                 <hr>
                                 <div class="invite-reason" component="invite/reason" >
-                                    <span>题名理由：</span>
+                                    <span>[[invite:detail.reason]]</span>
                                     <span component="invite/content" class="post-content" itemprop="text">{content}</span>
                                 </div>
                                 <hr>
@@ -63,67 +63,47 @@
                                 <!-- ENDIF !invited -->
 
                                 <div class="invite-course" component="invite/reason" >
-                                    <span>邀请历程</span>
+                                    <span>[[invite:detail.invite_course]]</span>
                                 </div>
-
-                                <div class="small-text count">到目前获得了<span component="invite/vote-count" class="votes" data-votes="inviteCount">{inviteCount}</span>票</div>
-
-                                <!-- IF invited -->
-                                <div class="small-text invited">{invitedTime}，邀请邮件已经发出</div>
-                                <!-- ENDIF invited -->
-
-                                <!-- IF joined -->
-                                <div class="small-text joined">该用户已于某时接受邀请进入社区</div>
-                                <!-- ELSE -->
-                                <!-- IF notJoined -->
-                                <div class="small-text not-joined">邀请邮件已经发出五天，被邀请人还没有进入</div>
-                                <!-- ENDIF notJoined -->
-                                <!-- ENDIF joined -->
+                                <ol class="course-list small-text">
+                                    <!-- IF !invited -->
+                                    <li>提名贴发出时显示：{invitedTime} xxx 提名 {username} 进入社区；</li>
+                                    <li>当有第二个人投票时显示：到目前共获得 {inviteCount} 票支持 //以后票数累加{endSymbol1}</li>
+                                    <!-- ELSE -->
+                                    <li>{invitedTime} 对 {username} 的提名已获得 {inviteCount} 票支持，达到邀请票数，邀请邮件已经发出{endSymbol2}</li>
+                                    <!-- ENDIF !invited -->
+                                    <!-- IF joined -->
+                                    <li class="small-text joined">{username} 已在某时接受邀请重生于社区。</li>
+                                    <!-- ELSE -->
+                                    <!-- IF notJoined -->
+                                    <li>2015/2/1-1:22 发给 {username} 的邀请，在一周内未注册进来，本次邀请失败；</li>
+                                    <!-- ENDIF notJoined -->
+                                    <!-- ENDIF joined -->
+                                </ol>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="topic-footer">
                     <div class="row">
-                        <div class="">
-                            <small class="pull-right">
-                                <span>
-                                    <!-- IF user.userslug -->
-                                    <i component="user/status" class="fa fa-circle status {user.status}" title='[[global:{posts.user.status}]]'></i>
-                                    <!-- ENDIF user.userslug -->
-                                    <span data-username="{posts.user.username}" data-uid="{user.uid}">
-                                        <!-- IF user.userslug -->
-                                        [[global:user_posted_ago, <strong><a href="{relative_path}/user/{user.userslug}" itemprop="author">{user.username}</a></strong>, <span class="timeago" title="{relativeTime}"></span>]]
-                                        <!-- ELSE -->
-                                        [[global:guest_posted_ago, <span class="timeago" title="{relativeTime}"></span>]]
-                                        <!-- ENDIF user.userslug -->
-                                    </span>
-                                </span>
+                        <span class="post-tools">
+                            <!-- IF !isSelf -->
+                            <!-- IF user.userslug -->
+                            <!-- IF loggedIn -->
+                            <!-- IF !config.disableChat -->
+                            <button component="invite/chat" class="btn btn-sm btn-link chat" type="button" title="[[topic:chat]]"><i class="fa fa-comment"></i><span class="hidden-xs-inline"> [[topic:chat]]</span></button>
+                            <!-- ENDIF !config.disableChat -->
+                            <!-- ENDIF loggedIn -->
+                            <!-- ENDIF user.userslug -->
+                            <!-- ENDIF !isSelf -->
 
-                                <!-- IF editor.username -->
-                                <span>, [[global:last_edited_by_ago, <strong><a href="{relative_path}/user/{editor.userslug}">{editor.username}</a></strong>, <span class="timeago" title="{relativeEditTime}"></span>]]</span>
-                                <!-- ENDIF editor.username -->
-                            </small>
-
-                            <span class="post-tools">
-                                <!-- IF !isSelf -->
-                                <!-- IF user.userslug -->
-                                <!-- IF loggedIn -->
-                                <!-- IF !config.disableChat -->
-                                <button component="invite/chat" class="btn btn-sm btn-link chat" type="button" title="[[topic:chat]]"><i class="fa fa-comment"></i><span class="hidden-xs-inline"> [[topic:chat]]</span></button>
-                                <!-- ENDIF !config.disableChat -->
-                                <!-- ENDIF loggedIn -->
-                                <!-- ENDIF user.userslug -->
-                                <!-- ENDIF !isSelf -->
-
-                                <!-- IF !invited-->
-                                <!-- IF deletable -->
-                                    <button component="invite/edit" class="btn btn-sm btn-link edit" type="button" title="[[topic:edit]]"><i class="fa fa-pencil"></i><span class="hidden-xs-inline"> [[topic:edit]]</span></button>
-                                    <button component="invite/delete" class="btn btn-sm btn-link delete" type="button" title="[[topic:delete]]"><i class="fa fa-trash-o"></i><span class="hidden-xs-inline"> [[topic:delete]]</span></button>
-                                <!-- ENDIF deletable -->
-                                <!-- ENDIF !invited-->
-                            </span>
-                        </div>
+                            <!-- IF !invited-->
+                            <!-- IF deletable -->
+                                <button component="invite/edit" class="btn btn-sm btn-link edit" type="button" title="[[topic:edit]]"><i class="fa fa-pencil"></i><span class="hidden-xs-inline"> [[topic:edit]]</span></button>
+                                <button component="invite/delete" class="btn btn-sm btn-link delete" type="button" title="[[topic:delete]]"><i class="fa fa-trash-o"></i><span class="hidden-xs-inline"> [[topic:delete]]</span></button>
+                            <!-- ENDIF deletable -->
+                            <!-- ENDIF !invited-->
+                        </span>
                     </div>
                 </div>
             </div>
