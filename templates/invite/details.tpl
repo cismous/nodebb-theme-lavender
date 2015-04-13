@@ -1,8 +1,8 @@
 <div class="topic" id="invite-detail">
-<ol class="breadcrumb">
-	<!-- BEGIN breadcrumbs -->
-	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb" <!-- IF @last -->class="active"<!-- ENDIF @last -->>
-		<!-- IF !@last --><a href="{breadcrumbs.url}" itemprop="url"><!-- ENDIF !@last -->
+    <ol class="breadcrumb">
+        <!-- BEGIN breadcrumbs -->
+        <li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb" <!-- IF @last -->class="active"<!-- ENDIF @last -->>
+        <!-- IF !@last --><a href="{breadcrumbs.url}" itemprop="url"><!-- ENDIF !@last -->
 			<span itemprop="title">
 				{breadcrumbs.text}
 				<!-- IF @last -->
@@ -11,9 +11,9 @@
 				<!-- ENDIF @last -->
 			</span>
 		<!-- IF !@last --></a><!-- ENDIF !@last -->
-	</li>
-	<!-- END breadcrumbs -->
-</ol>
+        </li>
+        <!-- END breadcrumbs -->
+    </ol>
 
     <ul component="invite" id="post-container" class="posts" data-iid="{iid}">
         <li class="post-row <!-- IF deleted -->deleted<!-- ENDIF deleted -->"
@@ -61,6 +61,10 @@
                                 </div>
                                 <!-- ENDIF !invitedByMe -->
                                 <!-- ENDIF !invited -->
+
+                                <div class="invite-course" component="invite/reason" >
+                                    <span>邀请历程</span>
+                                </div>
 
                                 <div class="small-text count">到目前获得了<span component="invite/vote-count" class="votes" data-votes="inviteCount">{inviteCount}</span>票</div>
 
@@ -139,4 +143,3 @@
 <input type="hidden" template-variable="invite_name" value="{username}" />
 <input type="hidden" template-variable="invitecount" value="{invitecount}" />
 <input type="hidden" template-variable="viewcount" value="{viewcount}" />
-
