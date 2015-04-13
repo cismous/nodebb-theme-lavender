@@ -11,12 +11,12 @@
 
         <div class="username-container form-group">
             <label for="username" class="control-label hide">[[invite:composer.type_username]]</label>
-            <input class="form-control" type="text" placeholder="[[invite:composer.type_username]]" value="{username}" name="username" id="username" autocorrect="off" autocapitalize="off"/>
+            <input class="form-control" tabindex="1" type="text" placeholder="[[invite:composer.type_username]]" value="{username}" name="username" id="username" autocorrect="off" autocapitalize="off"/>
         </div>
 
         <div class="email-container form-group">
             <label for="email" class="control-label hide">[[invite:composer.type_email]]</label>
-            <input class="form-control" type="text" placeholder="[[invite:composer.type_email]]" value="{email}" name="email" id="email" autocorrect="off" autocapitalize="off"/>
+            <input class="form-control" tabindex="2" type="text" placeholder="[[invite:composer.type_email]]" value="{email}" name="email" id="email" autocorrect="off" autocapitalize="off"/>
         </div>
 
         <div class="row category-tag-row">
@@ -37,7 +37,7 @@
                 <div class="btn-group pull-right action-bar hidden-sm hidden-xs">
                     <button class="btn btn-default composer-discard" data-action="discard" tabindex="-1"><i class="fa fa-times"></i> [[topic:composer.discard]]</button>
 
-                    <button class="btn btn-primary composer-submit" data-action="post" tabindex="6"><i class="fa fa-check"></i> [[topic:composer.submit]]</button>
+                    <button class="btn btn-primary composer-submit" data-action="post" tabindex="4"><i class="fa fa-check"></i> [[topic:composer.submit]]</button>
                     <!-- IF !isEditing -->
                     <!-- IF isAdminOrMod -->
                     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
@@ -60,7 +60,7 @@
                     [[modules:composer.compose]] <span class="help hidden"><i class="fa fa-question-circle"></i></span>
                     <span class="toggle-preview hide">[[modules:composer.show_preview]]</span>
                 </div>
-                <textarea class="write" tabindex="5" placeholder="请在这里输入提名理由"></textarea>
+                <textarea class="write" tabindex="3" placeholder="请在这里输入提名理由"></textarea>
             </div>
             <div class="col-md-6 hidden-sm hidden-xs preview-container">
                 <div class="help-text">
