@@ -11,6 +11,7 @@
         <li><a href="#" class="to_voting" data-sort="voting"><i class="fa fa-fw"></i> 正在投票</a></li>
         <li><a href="#" class="invited" data-sort="invited"><i class="fa fa-fw"></i> 已发邀请</a></li>
         <li><a href="#" class="joined" data-sort="joined"><i class="fa fa-fw"></i> 已进社区</a></li>
+        <li><a href="#" class="not_joined" data-sort="not_joined"><i class="fa fa-fw"></i> 邀请失败</a></li>
     </ul>
 </div>
 <!-- ENDIF loggedIn -->
