@@ -65,10 +65,10 @@
                                 <div class="invite-course" component="invite/reason" >
                                     <span>[[invite:detail.invite_course]]</span>
                                 </div>
-                                <ol class="course-list small-text">
+                                <ol component="invite/course" class="course-list small-text">
                                     <li>{createdTime} {user.username} 提名 {username} 进入社区；</li>
                                     <!-- IF !invited -->
-                                    <li>到目前共获得 {inviteCount} 票支持{endSymbol1}</li>
+                                    <li>到目前共获得 <span component="invite/vote-count">{inviteCount}</span> 票支持{endSymbol1}</li>
                                     <!-- ELSE -->
                                     <li>{invitedTime} 对 {username} 的提名已获得 {inviteCount} 票支持，达到邀请票数，邀请邮件已经发出{endSymbol2}</li>
                                     <!-- ENDIF !invited -->
@@ -97,12 +97,10 @@
                             <!-- ENDIF user.userslug -->
                             <!-- ENDIF !isSelf -->
 
-                            <!-- IF !invited-->
-                            <!-- IF deletable -->
+                            <!-- IF canControl -->
                                 <button component="invite/edit" class="btn btn-sm btn-link edit" type="button" title="[[topic:edit]]"><i class="fa fa-pencil"></i><span class="hidden-xs-inline"> [[topic:edit]]</span></button>
                                 <button component="invite/delete" class="btn btn-sm btn-link delete" type="button" title="[[topic:delete]]"><i class="fa fa-trash-o"></i><span class="hidden-xs-inline"> [[topic:delete]]</span></button>
-                            <!-- ENDIF deletable -->
-                            <!-- ENDIF !invited-->
+                            <!-- ENDIF canControl -->
                         </span>
                     </div>
                 </div>
