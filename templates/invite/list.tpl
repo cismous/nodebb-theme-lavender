@@ -33,7 +33,7 @@
                                 <p><strong><i component="invite/pinned" class="fa fa-thumb-tack<!-- IF !invite.pinned --> hide<!-- ENDIF !invite.pinned -->"></i> <i component="invite/locked" class="fa fa-lock<!-- IF !invite.locked --> hide<!-- ENDIF !invite.locked -->"></i></strong>
                                     <a href="{relative_path}/invite/{invite.slug}" itemprop="url" class="invite-title">{invite.username}</a><br />
                                     <small>
-                                        {invite.user.username}[[invite:list.posted_ago, <span class="timeago" title="{invite.relativeTime}"></span>]]
+                                        {invite.user.username} [[invite:list.posted_ago, <span class="timeago" title="{invite.relativeTime}"></span>]]
                                     </small>
                                     <small>，
                                         <!-- IF invite.joined -->
