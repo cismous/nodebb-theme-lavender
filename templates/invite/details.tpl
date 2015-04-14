@@ -66,7 +66,7 @@
                                     <span>[[invite:detail.invite_course]]</span>
                                 </div>
                                 <ol class="course-list small-text">
-                                    <li>{invitedTime} {user.username} 提名 {username} 进入社区；</li>
+                                    <li>{createdTime} {user.username} 提名 {username} 进入社区；</li>
                                     <!-- IF !invited -->
                                     <li>到目前共获得 {inviteCount} 票支持{endSymbol1}</li>
                                     <!-- ELSE -->
