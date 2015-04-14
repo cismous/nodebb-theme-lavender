@@ -33,21 +33,25 @@
                                 <p><strong><i component="topic/pinned" class="fa fa-thumb-tack<!-- IF !invite.pinned --> hide<!-- ENDIF !invite.pinned -->"></i> <i component="topic/locked" class="fa fa-lock<!-- IF !invite.locked --> hide<!-- ENDIF !invite.locked -->"></i></strong>
                                     <a href="{relative_path}/invite/{invite.slug}" itemprop="url" class="topic-title">{invite.username}</a><br />
                                     <small>
-                                        [[global:posted_ago, <span class="timeago" title="{invite.relativeTime}"></span>]]
+                                        [[invite:list.posted_ago, <span class="timeago" title="{invite.relativeTime}"></span>]]
+                                    </small>
+                                    <small>，
+                                        <!-- IF invite.joined -->
+                                        [[invite:list.status_joined]]
+                                        <!-- ELSE -->
+                                        <!-- IF invite.expired -->
+                                        [[invite:list.status_not_joined]]
+                                        <!-- ELSE -->
+                                        <!-- IF invite.invited -->
+                                        [[invite:list.status_invited]]
+                                        <!-- ELSE -->
+                                        [[invite:list.status_voting]]
+                                        <!-- ENDIF invite.invited -->
+                                        <!-- ENDIF invite.expired -->
+                                        <!-- ENDIF invite.joined -->
                                     </small>
                                 </p>
                             </div>
-                        </div>
-                        <div class="col-xs-2 category-stat replies hidden-sm hidden-xs">
-                            <!-- IF invite.joined -->
-                            <p class="no-replies">[[invite:list.joined]]</p>
-                            <!-- ELSE -->
-                            <!-- IF invite.invited -->
-                            <p class="no-replies">[[invite:list.invited]]</p>
-                            <!-- ELSE -->
-                            <p class="no-replies">[[invite:list.voting]]</p>
-                            <!-- ENDIF invite.invited -->
-                            <!-- ENDIF invite.joined -->
                         </div>
                         <div class="col-xs-1 category-stat hidden-xs">
                             <strong class="human-readable-number" title="{invite.inviteCount}">{invite.inviteCount}</strong><br />
@@ -68,3 +72,18 @@
         <!-- ENDIF config.usePagination -->
     </div>
 </div>
+<small>，
+    <!-- IF invite.joined -->
+    [[invite:list.status_joined]]
+    <!-- ELSE -->
+    <!-- IF invite.expired -->
+    [[invite:list.status_not_joined]]
+    <!-- ELSE -->
+    <!-- IF invite.invited -->
+    [[invite:list.status_invited]]
+    <!-- ELSE -->
+    [[invite:list.status_voting]]
+    <!-- ENDIF invite.invited -->
+    <!-- ENDIF invite.expired -->
+    <!-- ENDIF invite.joined -->
+</small>
