@@ -49,7 +49,7 @@
                                 <hr>
                                 <div class="invite-reason" component="invite/reason" >
                                     <span>[[invite:detail.reason]]</span>
-                                    <span component="invite/content" class="post-content" itemprop="text">{content}</span>
+                                    <div component="invite/content" class="post-content" itemprop="text">{content}</div>
                                 </div>
                                 <hr>
 
