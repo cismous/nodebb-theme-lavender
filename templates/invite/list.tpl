@@ -72,18 +72,3 @@
         <!-- ENDIF config.usePagination -->
     </div>
 </div>
-<small>，
-    <!-- IF invite.joined -->
-    [[invite:list.status_joined]]
-    <!-- ELSE -->
-    <!-- IF invite.expired -->
-    [[invite:list.status_not_joined]]
-    <!-- ELSE -->
-    <!-- IF invite.invited -->
-    [[invite:list.status_invited]]
-    <!-- ELSE -->
-    [[invite:list.status_voting]]
-    <!-- ENDIF invite.invited -->
-    <!-- ENDIF invite.expired -->
-    <!-- ENDIF invite.joined -->
-</small>
