@@ -1,7 +1,7 @@
 <!-- IF loggedIn -->
 <div class="btn-group" component="thread/sort">
     <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-        <span class="visible-sm-inline visible-md-inline visible-lg-inline">邀请状态</span>
+        <span class="visible-sm-inline visible-md-inline visible-lg-inline title">邀请状态</span>
         <span class="visible-xs-inline"><i class="fa fa-fw fa-sort"></i></span>
         <span class="caret"></span>
     </button>

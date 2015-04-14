@@ -6,8 +6,6 @@
             <button id="new_invite" class="btn btn-primary">[[invite:list.new]]</button>
 
 			<span class="pull-right">
-				<button type="button" class="btn btn-default btn-success watch <!-- IF !isIgnored -->hidden<!-- ENDIF !isIgnored -->"><i class="fa fa-eye"></i> [[topic:watch]]</button>
-				<button type="button" class="btn btn-default btn-warning ignore <!-- IF isIgnored -->hidden<!-- ENDIF isIgnored -->"><i class="fa fa-eye-slash"></i> [[category:ignore]]</button>
 				<!-- IMPORT invite/partials/invite_sort.tpl -->
 			</span>
         </div>
