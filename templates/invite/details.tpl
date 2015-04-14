@@ -66,8 +66,8 @@
                                     <span>[[invite:detail.invite_course]]</span>
                                 </div>
                                 <ol class="course-list small-text">
-                                    <!-- IF !invited -->
                                     <li>提名贴发出时显示：{invitedTime} xxx 提名 {username} 进入社区；</li>
+                                    <!-- IF !invited -->
                                     <li>当有第二个人投票时显示：到目前共获得 {inviteCount} 票支持 //以后票数累加{endSymbol1}</li>
                                     <!-- ELSE -->
                                     <li>{invitedTime} 对 {username} 的提名已获得 {inviteCount} 票支持，达到邀请票数，邀请邮件已经发出{endSymbol2}</li>
