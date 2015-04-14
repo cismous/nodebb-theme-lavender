@@ -16,10 +16,10 @@
         </div>
         <!-- ENDIF !invite.length -->
 
-        <ul component="category" id="invite-container" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}">
+        <ul component="invite" id="invite-container" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}">
             <meta itemprop="itemListOrder" content="descending">
             <!-- BEGIN invite -->
-            <li component="category/topic" class="category-item {function.generateTopicClass}" data-tid="{invite.tid}" data-index="{invite.index}" data-cid="{invite.cid}" itemprop="itemListElement">
+            <li component="invite/post" class="category-item {function.generateTopicClass}" data-tid="{invite.tid}" data-index="{invite.index}" data-cid="{invite.cid}" itemprop="itemListElement">
 
                 <div class="category-body">
                     <div class="row">
@@ -30,8 +30,8 @@
                                 </a>
                             </div>
                             <div class="category-text">
-                                <p><strong><i component="topic/pinned" class="fa fa-thumb-tack<!-- IF !invite.pinned --> hide<!-- ENDIF !invite.pinned -->"></i> <i component="topic/locked" class="fa fa-lock<!-- IF !invite.locked --> hide<!-- ENDIF !invite.locked -->"></i></strong>
-                                    <a href="{relative_path}/invite/{invite.slug}" itemprop="url" class="topic-title">{invite.username}</a><br />
+                                <p><strong><i component="invite/pinned" class="fa fa-thumb-tack<!-- IF !invite.pinned --> hide<!-- ENDIF !invite.pinned -->"></i> <i component="invite/locked" class="fa fa-lock<!-- IF !invite.locked --> hide<!-- ENDIF !invite.locked -->"></i></strong>
+                                    <a href="{relative_path}/invite/{invite.slug}" itemprop="url" class="invite-title">{invite.username}</a><br />
                                     <small>
                                         [[invite:list.posted_ago, <span class="timeago" title="{invite.relativeTime}"></span>]]
                                     </small>
