@@ -91,15 +91,20 @@
                             <!-- IF user.userslug -->
                             <!-- IF loggedIn -->
                             <!-- IF !config.disableChat -->
-                            <button component="invite/chat" class="btn btn-sm btn-link chat" type="button" title="[[topic:chat]]"><i class="fa fa-comment"></i><span class="hidden-xs-inline"> [[topic:chat]]</span></button>
+                            <button component="invite/chat" class="btn btn-sm btn-link chat" type="button" title="[[topic:chat]]"><i
+                                    class="fa fa-comment"></i><span class="hidden-xs-inline"> [[topic:chat]]</span></button>
                             <!-- ENDIF !config.disableChat -->
                             <!-- ENDIF loggedIn -->
                             <!-- ENDIF user.userslug -->
                             <!-- ENDIF !isSelf -->
 
                             <!-- IF canControl -->
-                                <button component="invite/edit" class="btn btn-sm btn-link edit" type="button" title="[[topic:edit]]"><i class="fa fa-pencil"></i><span class="hidden-xs-inline"> [[topic:edit]]</span></button>
-                                <button component="invite/delete" class="btn btn-sm btn-link delete" type="button" title="[[topic:delete]]"><i class="fa fa-trash-o"></i><span class="hidden-xs-inline"> [[topic:delete]]</span></button>
+                            <!-- IF !isSelf -->
+                                <button component="invite/edit" class="btn btn-sm btn-link edit" type="button" title="[[topic:edit]]"><i
+                                        class="fa fa-pencil"></i><span class="hidden-xs-inline"> [[topic:edit]]</span></button>
+                                <button component="invite/delete" class="btn btn-sm btn-link delete" type="button" title="[[topic:delete]]"><i
+                                        class="fa fa-trash-o"></i><span class="hidden-xs-inline"> [[topic:delete]]</span></button>
+                            <!-- ENDIF !isSelf -->
                             <!-- ENDIF canControl -->
                         </span>
                     </div>
