@@ -76,7 +76,7 @@
                                     <li class="small-text joined">{username} 已在某时接受邀请重生于社区。</li>
                                     <!-- ELSE -->
                                     <!-- IF notJoined -->
-                                    <li>{notJoinedTime} 发给 {username} 的邀请，在一周内未注册进来，本次邀请失败。</li>
+                                    <li>{notJoinedTime} 发给 {username} 的邀请，在{expiredTime}内未注册进来，本次邀请失败。</li>
                                     <!-- ENDIF notJoined -->
                                     <!-- ENDIF joined -->
                                 </ol>
