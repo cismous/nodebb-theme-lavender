@@ -99,12 +99,12 @@
                             <!-- ENDIF !isSelf -->
 
                             <!-- IF canControl -->
-                            <!-- IF !isSelf -->
+                            <!-- IF isSelf -->
                                 <button component="invite/edit" class="btn btn-sm btn-link edit" type="button" title="[[topic:edit]]"><i
                                         class="fa fa-pencil"></i><span class="hidden-xs-inline"> [[topic:edit]]</span></button>
                                 <button component="invite/delete" class="btn btn-sm btn-link delete" type="button" title="[[topic:delete]]"><i
                                         class="fa fa-trash-o"></i><span class="hidden-xs-inline"> [[topic:delete]]</span></button>
-                            <!-- ENDIF !isSelf -->
+                            <!-- ENDIF isSelf -->
                             <!-- ENDIF canControl -->
                         </span>
                     </div>
