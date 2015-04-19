@@ -84,6 +84,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- IF !hideFooter -->
                 <div class="topic-footer">
                     <div class="row">
                         <span class="post-tools">
@@ -111,6 +112,7 @@
                         </span>
                     </div>
                 </div>
+                <!-- ENDIF !hideFooter -->
             </div>
         </li>
     </ul>
