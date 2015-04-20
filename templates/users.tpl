@@ -29,7 +29,7 @@
         <!-- END users -->
     </ul>
 
-	<ul id="users-container" class="users-container">
+	<ul id="users-container" class="users-container {user_display}">
 		<!-- IMPORT partials/users_list.tpl -->
 		<!-- IF anonymousUserCount -->
 		<li class="users-box {show_anon} anon-user">
