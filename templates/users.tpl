@@ -23,9 +23,7 @@
 
     <ul class="ghost {ghost_display}">
         <!-- BEGIN users -->
-        <li class="users-box {show_anon} anon-user">
-            <a href="{relative_path}/user/{users.userslug}">{users.username}</a>
-        </li>
+        <li class="users-box {show_anon} anon-user">{users.username}</li>
         <!-- END users -->
     </ul>
 
