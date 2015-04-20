@@ -21,6 +21,14 @@
 		</div>
 	</div>
 
+    <ul class="ghost {ghost_display}">
+        <!-- BEGIN users -->
+        <li class="users-box {show_anon} anon-user">
+            <a href="{relative_path}/user/{users.userslug}">{users.username}</a>
+        </li>
+        <!-- END users -->
+    </ul>
+
 	<ul id="users-container" class="users-container">
 		<!-- IMPORT partials/users_list.tpl -->
 		<!-- IF anonymousUserCount -->
