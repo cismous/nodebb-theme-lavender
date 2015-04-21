@@ -71,21 +71,21 @@
                                     <span>[[invite:detail.invite_course]]</span>
                                 </div>
                                 <ol component="invite/course" class="course-list small-text">
-                                    <li>{createdTime} {user.username} 提名 {username} 进入社区；</li>
+                                    <li>{createdTime} {user.username} 提名 {username} 进入社区</li>
                                     <!-- IF !invited -->
-                                    <li>到目前共获得 <span component="invite/vote-count">{inviteCount}</span> 票支持{endSymbol1}</li>
+                                    <li>到目前共获得 <span component="invite/vote-count">{inviteCount}</span> 票支持</li>
                                     <!-- ELSE -->
-                                    <li>{invitedTime} 对 {username} 的提名已获得 {inviteCount} 票支持，达到邀请票数，邀请邮件已经发出{endSymbol2}</li>
+                                    <li>{invitedTime} 对 {username} 的提名已获得 {inviteCount} 票支持，达到邀请票数，邀请邮件已经发出</li>
                                     <!-- ENDIF !invited -->
                                     <!-- IF joined -->
-                                    <li class="small-text joined">{username} 已在某时接受邀请重生于社区。</li>
+                                    <li class="small-text joined">{username} 已在某时接受邀请重生于社区</li>
                                     <!-- ELSE -->
                                     <!-- IF notJoined -->
-                                    <li>{notJoinedTime} 发给 {username} 的邀请，在{expiredTime}内未注册进来，本次邀请失败。</li>
+                                    <li>{invitedTime} 发给 {username} 的邀请，在{expiredTime}内未注册进来，本次邀请失败</li>
                                     <!-- ENDIF notJoined -->
                                     <!-- ENDIF joined -->
                                     <!-- IF user.deleted -->
-                                    <li>提名人退出社区了。</li>
+                                    <li>提名人退出社区了</li>
                                     <!-- ENDIF user.deleted -->
                                 </ol>
                             </div>
