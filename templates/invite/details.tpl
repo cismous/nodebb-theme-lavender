@@ -38,6 +38,11 @@
                                     <span class="label label-danger">[[user:banned]]</span>
                                 </div>
                                 <!-- ENDIF user.banned -->
+                                <!-- IF user.deleted -->
+                                <div class="text-center">
+                                    <span class="label label-danger">已退出</span>
+                                </div>
+                                <!-- ENDIF user.deleted -->
                             </div>
                             <div class="invite-text">
                                 <div class="invite-user">
@@ -79,6 +84,9 @@
                                     <li>{notJoinedTime} 发给 {username} 的邀请，在{expiredTime}内未注册进来，本次邀请失败。</li>
                                     <!-- ENDIF notJoined -->
                                     <!-- ENDIF joined -->
+                                    <!-- IF user.deleted -->
+                                    <li>提名人退出社区了。</li>
+                                    <!-- ENDIF user.deleted -->
                                 </ol>
                             </div>
                         </div>
