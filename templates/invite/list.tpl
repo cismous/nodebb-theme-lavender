@@ -23,7 +23,7 @@
 
                 <div class="category-body">
                     <div class="row">
-                        <div class="col-md-8 col-sm-9">
+                        <div class="col-md-10 col-sm-9">
                             <div class="category-profile-pic">
                                 <a href="<!-- IF invite.user.userslug -->{relative_path}/user/{invite.user.userslug}<!-- ELSE -->#<!-- ENDIF invite.user.userslug -->">
                                     <img src="{invite.user.picture}" alt="{invite.user.username}" class="profile-image user-img" title="{invite.user.username}">
