@@ -40,7 +40,7 @@
                                 <!-- ENDIF user.banned -->
                                 <!-- IF user.deleted -->
                                 <div class="text-center">
-                                    <span class="label label-danger">已退出</span>
+                                    <span class="label label-danger">已删除</span>
                                 </div>
                                 <!-- ENDIF user.deleted -->
                             </div>
