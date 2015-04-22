@@ -23,7 +23,7 @@
 
     <ul class="ghost {ghost_display}">
         <!-- BEGIN users -->
-        <li class="users-box {show_anon} anon-user">{users.username}</li>
+        <li class="users-box {show_anon} anon-user">{users.invitedUsername}</li>
         <!-- END users -->
     </ul>
 
