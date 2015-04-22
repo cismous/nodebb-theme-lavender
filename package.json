@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-sim",
-  "version": "1.0.88",
+  "version": "1.0.89",
   "description": "Sim Theme for NodeBB",
   "main": "theme.less",
   "repository": {
