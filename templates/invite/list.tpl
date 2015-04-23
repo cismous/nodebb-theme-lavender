@@ -40,7 +40,7 @@
                                         [[invite:list.status_joined]]
                                         <!-- ELSE -->
                                         <!-- IF invite.expired -->
-                                        [[invite:list.status_not_joined]]
+                                        [[invite:list.status_failed]]
                                         <!-- ELSE -->
                                         <!-- IF invite.invited -->
                                         [[invite:list.status_invited]]
