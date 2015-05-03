@@ -84,6 +84,9 @@
                                     <li>{invitedTime} 发给 {username} 的邀请，在{expiredTime}内未注册进来，本次邀请失败</li>
                                     <!-- ENDIF notJoined -->
                                     <!-- ENDIF joined -->
+                                    <!-- IF inviterDeleted -->
+                                    <li>{deletedTime} {username} 被删除离开社区</li>
+                                    <!-- ENDIF inviterDeleted -->
                                     <!-- IF user.deleted -->
                                     <li>提名人退出社区了</li>
                                     <!-- ENDIF user.deleted -->

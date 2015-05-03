@@ -19,7 +19,7 @@
         <ul component="invite" id="invite-container" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}">
             <meta itemprop="itemListOrder" content="descending">
             <!-- BEGIN invite -->
-            <li component="invite/post" class="category-item {function.generateTopicClass}" data-tid="{invite.tid}" data-index="{invite.index}" data-cid="{invite.cid}" itemprop="itemListElement">
+            <li component="invite/post" class="category-item" data-iid="{invite.iid}" data-index="{invite.index}">
 
                 <div class="category-body">
                     <div class="row">
@@ -36,6 +36,9 @@
                                         {invite.user.username} [[invite:list.posted_ago, <span class="timeago" title="{invite.relativeTime}"></span>]]
                                     </small>
                                     <small>，
+                                        <!-- IF invite.deleted -->
+                                        [[invite:list.status_deleted]]
+                                        <!-- ELSE -->
                                         <!-- IF invite.joined -->
                                         [[invite:list.status_joined]]
                                         <!-- ELSE -->
@@ -49,6 +52,7 @@
                                         <!-- ENDIF invite.invited -->
                                         <!-- ENDIF invite.expired -->
                                         <!-- ENDIF invite.joined -->
+                                        <!-- ENDIF invite.deleted -->
                                     </small>
                                 </p>
                             </div>
