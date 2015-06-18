@@ -28,10 +28,10 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="topic-profile-pic hidden-xs text-center">
-                                <a href="<!-- IF user.userslug -->{config.config.relative_path}/user/{user.userslug}<!-- ELSE -->#<!-- ENDIF user.userslug -->">
+                                <a href="<!-- IF user.userslug -->{config.relative_path}/user/{user.userslug}<!-- ELSE -->#<!-- ENDIF user.userslug -->">
                                     <img src="{user.picture}" alt="{user.username}" class="profile-image user-img" title="{user.username}">
                                 </a>
-                                <small class="username" title="{user.username}"><a href="<!-- IF user.userslug -->{config.config.relative_path}/user/{user.userslug}<!-- ELSE -->#<!-- ENDIF user.userslug -->">{user.username}</a></small>
+                                <small class="username" title="{user.username}"><a href="<!-- IF user.userslug -->{config.relative_path}/user/{user.userslug}<!-- ELSE -->#<!-- ENDIF user.userslug -->">{user.username}</a></small>
 
                                 <!-- IF user.banned -->
                                 <div class="text-center">

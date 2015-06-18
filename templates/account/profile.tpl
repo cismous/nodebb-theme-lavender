@@ -112,7 +112,7 @@
                 </div>
                 <div class="panel-body">
                     <!-- BEGIN groups -->
-                    <a href="{config.config.relative_path}/groups/{groups.slug}"><span class="label group-label inline-block"
+                    <a href="{config.relative_path}/groups/{groups.slug}"><span class="label group-label inline-block"
                                                                          style="background-color: {groups.labelColor};"><!-- IF groups.icon --><i
                             class="fa {groups.icon}"></i> <!-- ENDIF groups.icon -->{groups.userTitle}</span></a>
                     <!-- END groups -->
@@ -153,8 +153,8 @@
                         </div>
                         <small>
 							<span class="pull-right post-preview-footer">
-								[[global:posted_in_ago, <a href="{config.config.relative_path}/category/{posts.category.slug}"><i class="fa {posts.category.icon}"></i> {posts.category.name}</a>, <span class="timeago" title="{posts.relativeTime}"></span>]] &bull;
-                                <a href="{config.config.relative_path}/topic/{posts.topic.slug}/{posts.index}">[[global:read_more]]</a>
+								[[global:posted_in_ago, <a href="{config.relative_path}/category/{posts.category.slug}"><i class="fa {posts.category.icon}"></i> {posts.category.name}</a>, <span class="timeago" title="{posts.relativeTime}"></span>]] &bull;
+                                <a href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}">[[global:read_more]]</a>
 							</span>
                         </small>
                     </div>

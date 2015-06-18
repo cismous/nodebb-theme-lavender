@@ -28,7 +28,7 @@
                             <input type="checkbox" name="remember" id="remember" checked /> [[login:remember_me]]
                         </label>
                         <!-- IF showResetLink -->
-                        &nbsp; &nbsp; &nbsp; <a id="reset-link" href="{config.config.relative_path}/reset">[[login:forgot_password]]</a>
+                        &nbsp; &nbsp; &nbsp; <a id="reset-link" href="{config.relative_path}/reset">[[login:forgot_password]]</a>
                         <!-- ENDIF showResetLink -->
                     </div>
                 </div>
@@ -51,7 +51,7 @@
         <h4>[[login:alternative_logins]]</h4>
         <ul class="alt-logins">
             <!-- BEGIN authentication -->
-            <li class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></li>
+            <li class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></li>
             <!-- END authentication -->
         </ul>
     </div>
