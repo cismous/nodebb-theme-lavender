@@ -1,5 +1,5 @@
 <!-- IF !loggedIn -->
-<div class="welcome-image" style="background-image: url(/images/welcome.jpg)"><a href="{relative_path}/login">登录</a></div>
+<div class="welcome-image" style="background-image: url(/images/welcome.jpg)"><a href="{config.config.relative_path}/login">登录</a></div>
 <!-- ELSE -->
 <div class="row home" itemscope itemtype="http://www.schema.org/ItemList">
 	<div class="col-lg-9 col-sm-12" no-widget-class="col-lg-12 col-sm-12" no-widget-target="sidebar">
@@ -13,7 +13,7 @@
 					<!-- IF categories.link -->
 					<a style="color: {categories.color};" href="{categories.link}" itemprop="url" target="_blank">
 					<!-- ELSE -->
-					<a style="color: {categories.color};" href="{relative_path}/category/{categories.slug}" itemprop="url">
+					<a style="color: {categories.color};" href="{config.config.relative_path}/category/{categories.slug}" itemprop="url">
 					<!-- ENDIF categories.link -->
 						<div
 							id="category-{categories.cid}" class="category-header category-header-image-{categories.imageClass}"
@@ -38,7 +38,7 @@
 							<!-- IF categories.link -->
 							<a href="{categories.link}" itemprop="url" target="_blank">
 							<!-- ELSE -->
-							<a href="{relative_path}/category/{categories.slug}" itemprop="url">
+							<a href="{config.config.relative_path}/category/{categories.slug}" itemprop="url">
 							<!-- ENDIF categories.link-->
 								<h4><!-- IF categories.icon --><i class="fa {categories.icon} visible-xs-inline"></i> <!-- ENDIF categories.icon -->{categories.name}</h4>
 							</a>
@@ -48,9 +48,9 @@
 						<!-- BEGIN posts -->
 						<div class="post-preview clearfix">
 							<div class="post-preview-content">
-								<strong><a href="{relative_path}/topic/{categories.posts.topic.slug}">{categories.posts.topic.title}</a></strong>
+								<strong><a href="{config.config.relative_path}/topic/{categories.posts.topic.slug}">{categories.posts.topic.title}</a></strong>
 								<hr/>
-								<a style="color: {categories.color};" href="<!-- IF categories.posts.user.userslug -->{relative_path}/user/{categories.posts.user.userslug}<!-- ELSE -->#<!-- ENDIF categories.posts.user.userslug-->">
+								<a style="color: {categories.color};" href="<!-- IF categories.posts.user.userslug -->{config.config.relative_path}/user/{categories.posts.user.userslug}<!-- ELSE -->#<!-- ENDIF categories.posts.user.userslug-->">
 									<img src="{categories.posts.user.picture}" title="{categories.posts.user.username}" class="pull-left user-img" />
 								</a>
 								<div class="content">
@@ -60,7 +60,7 @@
 							</div>
 							<span class="pull-right footer">
 								<span class="timeago" title="{categories.posts.relativeTime}"></span> &bull;
-								<a href="{relative_path}/topic/{categories.posts.topic.slug}<!-- IF categories.posts.index -->/{categories.posts.index}<!-- ENDIF categories.posts.index -->">[[global:read_more]]</a>
+								<a href="{config.config.relative_path}/topic/{categories.posts.topic.slug}<!-- IF categories.posts.index -->/{categories.posts.index}<!-- ENDIF categories.posts.index -->">[[global:read_more]]</a>
 							</span>
 						</div>
 						<!-- END posts -->
