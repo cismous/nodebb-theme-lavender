@@ -10,19 +10,19 @@
         </nav>
 
         <div class="username-container input-group">
-            <label for="username" class="control-label hide">[[invite:composer.type_username]]</label>
-            <input class="form-control" tabindex="1" type="text" placeholder="[[invite:composer.type_username]]" value="{username}" name="username" id="username" autocorrect="off" autocapitalize="off"/>
             <span class="input-group-addon">
                 <span id="username-notify"><i class="fa fa-circle-o"></i></span>
             </span>
+            <label for="username" class="control-label hide">[[invite:composer.type_username]]</label>
+            <input class="form-control" tabindex="1" type="text" placeholder="[[invite:composer.type_username]]" value="{username}" name="username" id="username" autocorrect="off" autocapitalize="off"/>
         </div>
 
         <div class="email-container input-group">
-            <label for="email" class="control-label hide">[[invite:composer.type_email]]</label>
-            <input class="form-control" tabindex="2" type="text" placeholder="[[invite:composer.type_email]]" value="{email}" name="email" id="email" autocorrect="off" autocapitalize="off"/>
             <span class="input-group-addon">
                 <span id="email-notify"><i class="fa fa-circle-o"></i></span>
             </span>
+            <label for="email" class="control-label hide">[[invite:composer.type_email]]</label>
+            <input class="form-control" tabindex="2" type="text" placeholder="[[invite:composer.type_email]]" value="{email}" name="email" id="email" autocorrect="off" autocapitalize="off"/>
         </div>
 
         <div class="row category-tag-row">
