@@ -1,5 +1,3 @@
-<!-- IMPORT partials/breadcrumbs.tpl -->
-
 <div class="row">
 	<div class="{register_window:spansize}">
 		<div class="well well-lg">
@@ -10,8 +8,8 @@
 			</div>
 			<form class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
 				<div class="form-group">
-					<label for="email" class="col-lg-4 control-label">[[register:email_address]]</label>
-					<div class="col-lg-8">
+					<label for="email" class="col-lg-2 control-label">[[register:email_address]]</label>
+					<div class="col-lg-9">
 						<div class="input-group">
 							<input class="form-control" type="text" value="{email}" name="email" id="email" readonly autocorrect="off" autocapitalize="off" />
 							<span class="input-group-addon">
@@ -22,8 +20,8 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="username" class="col-lg-4 control-label">[[register:username]]</label>
-					<div class="col-lg-8">
+					<label for="username" class="col-lg-2 control-label">[[register:username]]</label>
+					<div class="col-lg-9">
 						<div class="input-group">
 							<input class="form-control" type="text" value="{username}" name="username" id="username" readonly autocorrect="off" autocapitalize="off" />
 							<span class="input-group-addon">
@@ -34,8 +32,8 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="password" class="col-lg-4 control-label">[[register:password]]</label>
-					<div class="col-lg-8">
+					<label for="password" class="col-lg-2 control-label">[[register:password]]</label>
+					<div class="col-lg-9">
 						<div class="input-group">
 							<input class="form-control" type="password" placeholder="[[register:password_placeholder]]" name="password" id="password" />
 							<span class="input-group-addon">
@@ -46,8 +44,8 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="password-confirm" class="col-lg-4 control-label">[[register:confirm_password]]</label>
-					<div class="col-lg-8">
+					<label for="password-confirm" class="col-lg-2 control-label">[[register:confirm_password]]</label>
+					<div class="col-lg-9">
 						<div class="input-group">
 							<input class="form-control" type="password" placeholder="[[register:confirm_password_placeholder]]" name="password-confirm" id="password-confirm" />
 							<span class="input-group-addon">
@@ -59,8 +57,8 @@
 
 				<!-- BEGIN regFormEntry -->
 				<div class="form-group">
-					<label for="register-{regFormEntry.styleName}" class="col-lg-4 control-label">{regFormEntry.label}</label>
-					<div id="register-{regFormEntry.styleName}" class="col-lg-8">
+					<label for="register-{regFormEntry.styleName}" class="col-lg-2 control-label">{regFormEntry.label}</label>
+					<div id="register-{regFormEntry.styleName}" class="col-lg-9">
 						{regFormEntry.html}
 					</div>
 				</div>
@@ -68,8 +66,8 @@
 
 				<!-- IF termsOfUse -->
 				<div class="form-group">
-					<label class="col-lg-4 control-label">&nbsp;</label>
-					<div class="col-lg-8">
+					<label class="col-lg-2 control-label">&nbsp;</label>
+					<div class="col-lg-9">
 						<hr />
 						<strong>[[register:terms_of_use]]</strong>
 						<textarea readonly class="form-control" rows=6>{termsOfUse}</textarea>
@@ -82,7 +80,7 @@
 				</div>
 				<!-- ENDIF termsOfUse -->
 				<div class="form-group">
-					<div class="col-lg-offset-4 col-lg-8">
+					<div class="col-lg-offset-2 col-lg-9">
 						<hr />
 						<button class="btn btn-primary btn-lg btn-block" id="register" type="submit">[[register:register_now_button]]</button>
 					</div>
