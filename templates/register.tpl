@@ -1,3 +1,8 @@
+<div class="row" style="background:#fff;">
+	<div class="col-lg-5"
+		 style="height:577px;border:1px solid #EDEDED;border-right:0;background: url(/images/register.png) 50% 50% no-repeat"></div>
+
+	<div class="col-lg-7">
 <div class="row">
 	<div class="{register_window:spansize}">
 		<div class="well well-lg">
@@ -102,4 +107,6 @@
 		</div>
 	</div>
 	<!-- ENDIF alternate_logins -->
+</div>
+</div>
 </div>
