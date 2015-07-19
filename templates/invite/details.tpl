@@ -58,14 +58,25 @@
                                 </div>
                                 <hr>
 
-                                <!-- IF !invited -->
-                                <!-- IF !invitedByMe -->
-                                <div class="invite-upvote">
-                                    <button component="invite/upvote" class="btn btn-primary<!-- IF joined--> btn-success active<!-- ELSE --><!-- IF invited--> btn-danger<!-- ENDIF invited--><!-- ENDIF joined-->" type="button">[[invite:detail.upvote]]</button>
-                                    <hr>
-                                </div>
-                                <!-- ENDIF !invitedByMe -->
-                                <!-- ENDIF !invited -->
+								<div class="invite-statistics">
+									<!-- IF !invited -->
+									<!-- IF !invitedByMe -->
+									<div class="invite-upvote">
+										<button component="invite/upvote" class="btn btn-primary" type="button">[[invite:detail.upvote]] ({upvoteCount})</button>
+										<button component="invite/downvote" class="btn btn-default" type="button">[[invite:detail.downvote]]({downvoteCount})</button>
+									</div>
+									<!-- ENDIF !invitedByMe -->
+									<!-- ENDIF !invited -->
+
+									<ul class="statistics-list small-text">
+										<li class="vote-up">目前绝对支持票数: {upvoteCount}票</li>
+										<li class="member-count">社区总人数：{userCount}人</li>
+										<li class="vote-pass">提名通过比例：{votePercent}%</li>
+										<li class="vote-need-count">提名总需票数：{needVote}票</li>
+										<li class="vote-remain-count">通过提名还需用的票数：{remainVote}票</li>
+									</ul>
+									<hr>
+								</div>
 
                                 <div class="invite-course" component="invite/reason" >
                                     <span>[[invite:detail.invite_course]]</span>
@@ -73,9 +84,9 @@
                                 <ol component="invite/course" class="course-list small-text">
                                     <li>{createdTime} {user.username} 提名 {username} 进入社区</li>
                                     <!-- IF !invited -->
-                                    <li>到目前共获得 <span component="invite/vote-count">{inviteCount}</span> 票支持</li>
+                                    <!--<li>到目前共获得 <span component="invite/vote-count">{inviteCount}</span> 票支持</li>-->
                                     <!-- ELSE -->
-                                    <li>{invitedTime} 对 {username} 的提名已获得 {inviteCount} 票支持，达到邀请票数，邀请邮件已经发出</li>
+                                    <!--<li>{invitedTime} 对 {username} 的提名已获得 {inviteCount} 票支持，达到邀请票数，邀请邮件已经发出</li>-->
                                     <!-- ENDIF !invited -->
                                     <!-- IF joined -->
                                     <li class="small-text joined">{username} 已在某时接受邀请重生于社区</li>
