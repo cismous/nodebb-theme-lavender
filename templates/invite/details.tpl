@@ -58,25 +58,25 @@
                                 </div>
                                 <hr>
 
+								<!-- IF !invited -->
 								<div class="invite-statistics">
-									<!-- IF !invited -->
-									<!-- IF !invitedByMe -->
+									<!-- IF !isVote -->
 									<div class="invite-upvote">
 										<button component="invite/upvote" class="btn btn-primary" type="button">[[invite:detail.upvote]] ({upvoteCount})</button>
-										<button component="invite/downvote" class="btn btn-default" type="button">[[invite:detail.downvote]]({downvoteCount})</button>
+										<button component="invite/downvote" class="btn btn-default" type="button">[[invite:detail.downvote]] ({downvoteCount})</button>
 									</div>
-									<!-- ENDIF !invitedByMe -->
-									<!-- ENDIF !invited -->
+									<!-- ENDIF !isVote -->
 
 									<ul class="statistics-list small-text">
-										<li class="vote-up">目前绝对支持票数: {upvoteCount}票</li>
+										<li class="vote-up">目前绝对支持票数: <span component="invite/upvote-count">{upvoteCount}</span>票</li>
 										<li class="member-count">社区总人数：{userCount}人</li>
 										<li class="vote-pass">提名通过比例：{votePercent}%</li>
-										<li class="vote-need-count">提名总需票数：{needVote}票</li>
-										<li class="vote-remain-count">通过提名还需用的票数：{remainVote}票</li>
+										<li class="vote-need-count">提名总需票数：<span component="invite/need-vote">{needVote}</span>票</li>
+										<li class="vote-remain-count">通过提名还需用的票数：<span component="invite/remain-vote">{remainVote}</span>票</li>
 									</ul>
 									<hr>
 								</div>
+								<!-- ENDIF !invited -->
 
                                 <div class="invite-course" component="invite/reason" >
                                     <span>[[invite:detail.invite_course]]</span>
