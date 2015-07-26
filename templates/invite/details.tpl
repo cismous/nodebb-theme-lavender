@@ -68,7 +68,7 @@
 									<!-- ENDIF !isVote -->
 
 									<ul class="statistics-list small-text">
-										<li class="vote-up">目前绝对支持票数: <span component="invite/upvote-count">{upvoteCount}</span>票</li>
+										<li class="vote-up">目前绝对支持票数: <span component="invite/result-count">{resultVoteCount}</span>票,（其中支持<span component="invite/upvote-count">{upvoteCount}</span>票，反对<span component="invite/downvote-count">{downvoteCount}</span>票）</li>
 										<li class="member-count">社区总人数：{userCount}人</li>
 										<li class="vote-pass">提名通过比例：{votePercent}%</li>
 										<li class="vote-need-count">提名总需票数：<span component="invite/need-vote">{needVote}</span>票</li>
@@ -86,7 +86,7 @@
                                     <!-- IF !invited -->
                                     <!--<li>到目前共获得 <span component="invite/vote-count">{inviteCount}</span> 票支持</li>-->
                                     <!-- ELSE -->
-                                    <!--<li>{invitedTime} 对 {username} 的提名已获得 {inviteCount} 票支持，达到邀请票数，邀请邮件已经发出</li>-->
+                                    <li>{invitedTime} 对 {username} 的提名已获得 {inviteCount} 票支持，达到邀请票数，邀请邮件已经发出</li>
                                     <!-- ENDIF !invited -->
                                     <!-- IF joined -->
                                     <li class="small-text joined">{username} 已在某时接受邀请重生于社区</li>
