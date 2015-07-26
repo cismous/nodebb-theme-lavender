@@ -21,6 +21,15 @@
 </div>
 
 <div class="navbar-collapse collapse navbar-ex1-collapse" id="nav-dropdown">
+	<ul class="nav navbar-nav pull-left">
+		<li>
+			<a href="/" id="home" data-original-title="首页">
+				<i class="fa fa-fw fa-home"></i>
+
+				<span class="visible-xs-inline">首页</span>
+			</a>
+		</li>
+	</ul>
 	<!-- IF !maintenanceHeader -->
 	<ul id="main-nav" class="nav navbar-nav pull-left">
 		<!-- BEGIN navigation -->
