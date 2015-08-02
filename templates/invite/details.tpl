@@ -88,11 +88,14 @@
                                     <!-- ELSE -->
                                     <li>{invitedTime} 对 {username} 的提名已获得 {inviteCount} 票支持，达到邀请票数，邀请邮件已经发出</li>
 									<!-- IF isDelivered -->
-									<li>{trackTime} 邀请邮件已经到达 {username} 的信箱，但还没有被查阅</li>
+									<li>{trackDeliverTime} 邀请邮件已经到达 {username} 的信箱，但还没有被查阅</li>
 									<!-- ENDIF isDelivered -->
 									<!-- IF isOpened -->
-									<li>{trackTime} 邀请邮件已经到达 {username} 的信箱，并且已被查阅</li>
+									<li>{trackOpenTime} 邀请邮件被查阅</li>
 									<!-- ENDIF isOpened -->
+									<!-- IF isClicked -->
+									<li>{trackClickTime} 邀请链接被点击</li>
+									<!-- ENDIF isClicked -->
                                     <!-- ENDIF !invited -->
                                     <!-- IF joined -->
                                     <li class="small-text joined">{username} 已在某时接受邀请重生于社区</li>
