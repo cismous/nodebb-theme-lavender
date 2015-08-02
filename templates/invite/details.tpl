@@ -87,6 +87,11 @@
                                     <!--<li>到目前共获得 <span component="invite/vote-count">{inviteCount}</span> 票支持</li>-->
                                     <!-- ELSE -->
                                     <li>{invitedTime} 对 {username} 的提名已获得 {inviteCount} 票支持，达到邀请票数，邀请邮件已经发出</li>
+									<!-- IF !isOpen -->
+									<li>{trackTime} 邀请邮件已经到达 {username} 的信箱，并且已被查阅。</li>
+									<!-- ELSE -->
+									<li>{trackTime} 邀请邮件已经到达 {username} 的信箱，但还没有被查阅。</li>
+									<!-- ENDIF !isOpen -->
                                     <!-- ENDIF !invited -->
                                     <!-- IF joined -->
                                     <li class="small-text joined">{username} 已在某时接受邀请重生于社区</li>
