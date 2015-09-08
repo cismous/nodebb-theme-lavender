@@ -72,7 +72,7 @@
 										<li class="member-count">社区总人数：{userCount}人</li>
 										<li class="vote-pass">提名通过比例：{votePercent}%</li>
 										<li class="vote-need-count">提名总需票数：<span component="invite/need-vote">{needVote}</span>票</li>
-										<li class="vote-remain-count">通过提名还需用的票数：<span component="invite/remain-vote">{remainVote}</span>票</li>
+										<li class="vote-remain-count">通过提名还需要的票数：<span component="invite/remain-vote">{remainVote}</span>票</li>
 									</ul>
 									<hr>
 								</div>
