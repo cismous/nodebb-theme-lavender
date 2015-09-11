@@ -64,10 +64,11 @@
                             <small>[[invite:list.invite_count]]</small>
                         </div>
                         <!-- IF invite.visibleRemainCount -->
-                        <div class="col-xs-1 category-stat hidden-xs <!-- IF invite.visibleRemainCount -->invite-item-gray<!-- ENDIF invite.visibleRemainCount -->">
+                        <div class="col-xs-1 category-stat hidden-xs <!-- IF !invite.remainCount -->invite-item-gray<!-- ENDIF !invite.remainCount -->">
                             <strong class="human-readable-number" title="{invite.remainCount}">{invite.remainCount}</strong><br />
                             <small>[[invite:list.remain_count]]</small>
                         </div>
+                        <!-- ENDIF invite.visibleRemainCount -->
                         <div class="col-xs-1 category-stat hidden-xs">
                             <strong class="human-readable-number" title="{invite.viewcount}">{invite.viewcount}</strong><br />
                             <small>[[global:views]]</small>
