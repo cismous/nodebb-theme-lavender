@@ -1,6 +1,6 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
-<div class="category row">
+<div class="category row" id="invite-list">
     <div class="{invite_row_size}" no-widget-class="col-lg-12 col-sm-12" no-widget-target="sidebar">
         <div class="header clearfix">
             <button id="new_invite" class="btn btn-primary">[[invite:list.new]]</button>
@@ -23,7 +23,7 @@
 
                 <div class="category-body">
                     <div class="row">
-                        <div class="col-md-10 col-sm-9">
+                        <div class="<!-- IF invite.visibleRemainCount -->col-md-9 col-sm-8<!-- ELSE -->col-md-10 col-sm-9<!-- ENDIF invite.visibleRemainCount -->">
                             <div class="category-profile-pic">
                                 <a href="<!-- IF invite.user.userslug -->{config.relative_path}/user/{invite.user.userslug}<!-- ELSE -->#<!-- ENDIF invite.user.userslug -->">
                                     <img src="{invite.user.picture}" alt="{invite.user.username}" class="profile-image user-img" title="{invite.user.username}">
@@ -61,7 +61,12 @@
                         </div>
                         <div class="col-xs-1 category-stat hidden-xs">
                             <strong class="human-readable-number" title="{invite.inviteCount}">{invite.inviteCount}</strong><br />
-                            <small>[[invite:invite_count]]</small>
+                            <small>[[invite:list.invite_count]]</small>
+                        </div>
+                        <!-- IF invite.visibleRemainCount -->
+                        <div class="col-xs-1 category-stat hidden-xs <!-- IF invite.visibleRemainCount -->invite-item-gray<!-- ENDIF invite.visibleRemainCount -->">
+                            <strong class="human-readable-number" title="{invite.remainCount}">{invite.remainCount}</strong><br />
+                            <small>[[invite:list.remain_count]]</small>
                         </div>
                         <div class="col-xs-1 category-stat hidden-xs">
                             <strong class="human-readable-number" title="{invite.viewcount}">{invite.viewcount}</strong><br />
