@@ -23,7 +23,7 @@
 
                 <div class="category-body">
                     <div class="row">
-                        <div class="<!-- IF invite.visibleRemainCount -->col-md-9 col-sm-8<!-- ELSE -->col-md-10 col-sm-9<!-- ENDIF invite.visibleRemainCount -->">
+                        <div class="col-md-9 col-sm-8">
                             <div class="category-profile-pic">
                                 <a href="<!-- IF invite.user.userslug -->{config.relative_path}/user/{invite.user.userslug}<!-- ELSE -->#<!-- ENDIF invite.user.userslug -->">
                                     <img src="{invite.user.picture}" alt="{invite.user.username}" class="profile-image user-img" title="{invite.user.username}">
@@ -63,12 +63,10 @@
                             <strong class="human-readable-number" title="{invite.inviteCount}">{invite.inviteCount}</strong><br />
                             <small>[[invite:list.invite_count]]</small>
                         </div>
-                        <!-- IF invite.visibleRemainCount -->
                         <div class="col-xs-1 category-stat hidden-xs <!-- IF !invite.remainCount -->invite-item-gray<!-- ENDIF !invite.remainCount -->">
                             <strong class="human-readable-number" title="{invite.remainCount}">{invite.remainCount}</strong><br />
                             <small>[[invite:list.remain_count]]</small>
                         </div>
-                        <!-- ENDIF invite.visibleRemainCount -->
                         <div class="col-xs-1 category-stat hidden-xs">
                             <strong class="human-readable-number" title="{invite.viewcount}">{invite.viewcount}</strong><br />
                             <small>[[global:views]]</small>
