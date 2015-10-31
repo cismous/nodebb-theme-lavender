@@ -115,7 +115,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- IF !hideFooter -->
                 <div class="topic-footer">
                     <div class="row">
                         <span class="post-tools">
@@ -140,12 +139,82 @@
                             <!-- ENDIF isSelf -->
                             <!-- ENDIF !invited -->
                             <!-- ENDIF canControl -->
+                            <button component="invite/reply" class="btn btn-sm btn-link" type="button"><i class="fa fa-reply"></i><span class="hidden-xs-inline"> [[topic:reply]]</span></button>
                         </span>
                     </div>
                 </div>
-                <!-- ENDIF !hideFooter -->
             </div>
         </li>
+
+        <!-- BEGIN posts -->
+        <li component="post" class="post-row" <!-- IMPORT partials/data/topic.tpl -->>
+			<a component="post/anchor" name="{posts.index}"></a>
+
+			<meta itemprop="datePublished" content="{posts.relativeTime}">
+			<meta itemprop="dateModified" content="{posts.relativeEditTime}">
+
+			<div class="topic-item">
+				<div class="topic-body">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="topic-profile-pic hidden-xs text-center">
+								<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
+									<img src="{posts.user.picture}" alt="{posts.user.username}" class="profile-image user-img" title="{posts.user.username}">
+								</a>
+								<small class="username" title="{posts.user.username}"><a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">{posts.user.username}</a></small>
+
+								<!-- IF posts.user.banned -->
+								<div class="text-center">
+									<span class="label label-danger">[[user:banned]]</span>
+								</div>
+								<!-- ENDIF posts.user.banned -->
+
+								<!-- IMPORT partials/topic/badge.tpl -->
+							</div>
+							<div class="topic-text">
+								<!-- IF @first -->
+								<h3 class="topic-title">
+									<p component="post/header" class="topic-title" itemprop="name"><i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span component="topic/title">{title}</span></p>
+									<hr>
+								</h3>
+								<!-- ENDIF @first -->
+								<div component="post/content" class="post-content" itemprop="text">{{posts.content}}</div>
+								<!-- IF posts.user.signature -->
+								<div class="post-signature">{posts.user.signature}</div>
+								<!-- ENDIF posts.user.signature -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <div class="topic-footer">
+                    <div class="row">
+                        <div class="">
+                            <small class="pull-right">
+									<span>
+										<!-- IF posts.user.userslug -->
+										<i component="user/status" class="fa fa-circle status {posts.user.status}" title='[[global:{posts.user.status}]]'></i>
+										<!-- ENDIF posts.user.userslug -->
+										<span data-username="{posts.user.username}" data-uid="{posts.user.uid}">
+											<!-- IF posts.user.userslug -->
+											[[global:user_posted_ago, <strong><a href="{config.relative_path}/user/{posts.user.userslug}" itemprop="author">{posts.user.username}</a></strong>, <span class="timeago" title="{posts.relativeTime}"></span>]]
+											<!-- ELSE -->
+											[[global:guest_posted_ago, <span class="timeago" title="{posts.relativeTime}"></span>]]
+											<!-- ENDIF posts.user.userslug -->
+										</span>
+									</span>
+
+                                <!-- IF posts.editor.username -->
+                                <span>, [[global:last_edited_by_ago, <strong><a href="{config.relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</span>
+                                <!-- ENDIF posts.editor.username -->
+                            </small>
+                        </div>
+                    </div>
+                </div>
+			</div>
+        </li>
+
+        <!-- END posts -->
     </ul>
 </div>
 
