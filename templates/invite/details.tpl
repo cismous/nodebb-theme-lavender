@@ -209,7 +209,7 @@
                                 <!-- ENDIF posts.editor.username -->
                             </small>
                             <span class="post-tools">
-                                <button component="post/reply" class="btn btn-sm btn-link" type="button"><i class="fa fa-reply"></i><span class="hidden-xs-inline"> [[topic:reply]]</span></button>
+                                <button component="invite/reply" class="btn btn-sm btn-link" type="button"><i class="fa fa-reply"></i><span class="hidden-xs-inline"> [[topic:reply]]</span></button>
                             </span>
                         </div>
                     </div>
