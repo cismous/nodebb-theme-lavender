@@ -208,6 +208,9 @@
                                 <span>, [[global:last_edited_by_ago, <strong><a href="{config.relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</span>
                                 <!-- ENDIF posts.editor.username -->
                             </small>
+                            <span class="post-tools">
+                                <button component="post/reply" class="btn btn-sm btn-link" type="button"><i class="fa fa-reply"></i><span class="hidden-xs-inline"> [[topic:reply]]</span></button>
+                            </span>
                         </div>
                     </div>
                 </div>
