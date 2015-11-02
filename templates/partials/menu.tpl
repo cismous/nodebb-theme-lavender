@@ -9,7 +9,7 @@
 			<img class="{brand:logo:display} forum-logo" src="{brand:logo}" />
 		</a>
 		<!-- IF showSiteTitle -->
-		<a href="{relative_path}/recent">
+		<a href="{relative_path}/">
 			<h1 class="navbar-brand forum-title">{title}</h1>
 		</a>
 		<!-- ENDIF showSiteTitle -->
