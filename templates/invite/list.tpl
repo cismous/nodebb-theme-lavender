@@ -23,7 +23,7 @@
 
                 <div class="category-body">
                     <div class="row">
-                        <div class="<!-- IF isVoting -->col-md-8 col-sm-7<!-- ELSE -->col-md-9 col-sm-8<!-- ENDIF isVoting -->">
+                        <div class="<!-- IF col -->col-md-8 col-sm-7<!-- ELSE -->col-md-9 col-sm-8<!-- ENDIF col -->">
                             <div class="category-profile-pic">
                                 <a href="<!-- IF invite.user.userslug -->{config.relative_path}/user/{invite.user.userslug}<!-- ELSE -->#<!-- ENDIF invite.user.userslug -->">
                                     <img src="{invite.user.picture}" alt="{invite.user.username}" class="profile-image user-img" title="{invite.user.username}">
@@ -63,6 +63,12 @@
                             <strong class="human-readable-number" title="{invite.inviteCount}">{invite.inviteCount}</strong><br />
                             <small>[[invite:list.invite_count]]</small>
                         </div>
+                        <!-- IF isAll -->
+                        <div class="col-xs-1 category-stat hidden-xs<!-- IF !invite.postCount --> invite-item-gray<!-- ENDIF !invite.postCount -->">
+                            <strong class="human-readable-number" title="{invite.postCount}">{invite.postCount}</strong><br />
+                            <small>[[invite:list.postCount]]</small>
+                        </div>
+                        <!-- ENDIF isAll -->
                         <!-- IF isVoting -->
                         <div class="col-xs-1 category-stat hidden-xs<!-- IF !invite.downvoteCount --> invite-item-gray<!-- ENDIF !invite.downvoteCount -->">
                             <strong class="human-readable-number" title="{invite.downvoteCount}">{invite.downvoteCount}</strong><br />
