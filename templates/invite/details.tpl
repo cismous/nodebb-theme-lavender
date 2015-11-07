@@ -82,19 +82,19 @@
                                     <span>[[invite:detail.invite_course]]</span>
                                 </div>
                                 <ol component="invite/course" class="course-list small-text">
-                                    <li>{createdTime} {user.username} 提名 {username} 进入社区</li>
+                                    <li><span class="invite-time" title="{timestamp}"></span> {user.username} 提名 {username} 进入社区</li>
                                     <!-- IF !invited -->
                                     <!--<li>到目前共获得 <span component="invite/vote-count">{inviteCount}</span> 票支持</li>-->
                                     <!-- ELSE -->
-                                    <li>{invitedTime} 对 {username} 的提名已获得 {inviteCount} 票支持，达到邀请票数，邀请邮件已经发出</li>
+                                    <li><span class="invite-time" title="{invitedTime}"></span> 对 {username} 的提名已获得 {inviteCount} 票支持，达到邀请票数，邀请邮件已经发出</li>
 									<!-- IF isDelivered -->
-									<li>{trackDeliverTime} 邀请邮件已经到达 {username} 的信箱，但还没有被查阅</li>
+									<li><span class="invite-time" title="{trackDeliverTime}"></span> 邀请邮件已经到达 {username} 的信箱，但还没有被查阅</li>
 									<!-- ENDIF isDelivered -->
 									<!-- IF isOpened -->
-									<li>{trackOpenTime} 邀请邮件被查阅</li>
+									<li><span class="invite-time" title="{trackOpenTime}"></span> 邀请邮件被查阅</li>
 									<!-- ENDIF isOpened -->
 									<!-- IF isClicked -->
-									<li>{trackClickTime} 邀请链接被点击</li>
+									<li><span class="invite-time" title="{trackClickTime}"></span> 邀请链接被点击</li>
 									<!-- ENDIF isClicked -->
                                     <!-- ENDIF !invited -->
                                     <!-- IF joined -->
@@ -105,7 +105,7 @@
                                     <!-- ENDIF notJoined -->
                                     <!-- ENDIF joined -->
                                     <!-- IF inviterDeleted -->
-                                    <li>{deletedTime} {username} 被删除离开社区</li>
+                                    <li><span class="invite-time" title="{deletedTime}"></span> {username} 被删除离开社区</li>
                                     <!-- ENDIF inviterDeleted -->
                                     <!-- IF user.deleted -->
                                     <li>提名人退出社区了</li>
