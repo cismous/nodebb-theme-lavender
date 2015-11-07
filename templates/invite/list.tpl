@@ -83,6 +83,10 @@
                             <strong class="human-readable-number" title="{invite.viewcount}">{invite.viewcount}</strong><br />
                             <small>[[global:views]]</small>
                         </div>
+                        <div class="col-xs-1 category-stat hidden-xs">
+                            <strong class="human-readable-number" style="padding-top:2px;line-height:33px;font-size:17px;display:inline-block;">{invite.emailStatus}</strong><br />
+                            <small>邮件状态</small>
+                        </div>
                     </div>
                 </div>
 
