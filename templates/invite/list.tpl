@@ -75,20 +75,21 @@
                             <small>[[invite:list.invite_downvote]]</small>
                         </div>
                         <!-- ENDIF isVoting -->
-                        <div class="col-xs-1 category-stat hidden-xs<!-- IF !invite.remainCount --> invite-item-gray<!-- ENDIF !invite.remainCount -->">
-                            <strong class="human-readable-number" title="{invite.remainCount}">{invite.remainCount}</strong><br />
-                            <small>[[invite:list.remain_count]]</small>
-                        </div>
-                        <div class="col-xs-1 category-stat hidden-xs">
-                            <strong class="human-readable-number" title="{invite.viewcount}">{invite.viewcount}</strong><br />
-                            <small>[[global:views]]</small>
-                        </div>
-                        <!-- IF isJoined -->
+                        <!-- IF isInvited -->
                         <div class="col-xs-1 category-stat hidden-xs">
                             <strong class="human-readable-number" style="padding-top:2px;line-height:33px;font-size:17px;display:inline-block;">{invite.emailStatus}</strong><br />
                             <small>邮件状态</small>
                         </div>
-                        <!-- ENDIF isJoined -->
+                        <!-- ELSE -->
+                        <div class="col-xs-1 category-stat hidden-xs<!-- IF !invite.remainCount --> invite-item-gray<!-- ENDIF !invite.remainCount -->">
+                            <strong class="human-readable-number" title="{invite.remainCount}">{invite.remainCount}</strong><br />
+                            <small>[[invite:list.remain_count]]</small>
+                        </div>
+                        <!-- ENDIF isInvited -->
+                        <div class="col-xs-1 category-stat hidden-xs">
+                            <strong class="human-readable-number" title="{invite.viewcount}">{invite.viewcount}</strong><br />
+                            <small>[[global:views]]</small>
+                        </div>
                     </div>
                 </div>
 
