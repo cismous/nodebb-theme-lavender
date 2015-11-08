@@ -101,7 +101,7 @@
                                     <li class="small-text joined">{username} 已在某时接受邀请重生于社区</li>
                                     <!-- ELSE -->
                                     <!-- IF notJoined -->
-                                    <li>{expiredTime} 发给 {username} 的邀请，在{expiredText}内未注册进来，本次邀请失败</li>
+                                    <li><span class="invite-time" title="{expiredTime}"></span> 发给 {username} 的邀请，在{expiredText}内未注册进来，本次邀请失败</li>
                                     <!-- ENDIF notJoined -->
                                     <!-- ENDIF joined -->
                                     <!-- IF inviterDeleted -->
