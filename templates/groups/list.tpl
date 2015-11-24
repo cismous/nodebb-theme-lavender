@@ -3,8 +3,6 @@
         <!-- IF allowGroupCreation -->
         <button class="btn btn-primary" data-action="new"><i class="fa fa-plus"></i> [[groups:new_group]]</button>
         <!-- ENDIF allowGroupCreation -->
-        <button class="btn btn-primary" data-action="privacy-new"><i class="fa fa-plus"></i> 新建隐私群组</button>
-        <a href="/privacy-groups" class="btn btn-default">查看隐私群组</a>
     </div>
     <div class="col-lg-8">
         <div class="col-xs-3 text-left pull-right">
