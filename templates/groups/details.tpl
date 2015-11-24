@@ -6,11 +6,13 @@
 		<div class="instructions">[[groups:cover-instructions]]</div>
 	</div>
 	<div class="col-lg-6 col-xs-12">
-		<!-- IF group.privacy -->
+		<!-- IF group.isOwner -->
+		<!-- IF group.hidden -->
 		<div class="clearfix" style="padding-bottom: 20px;">
 			<button class="pull-left btn btn-primary" data-action="add-user">添加用户</button>
 		</div>
-		<!-- ENDIF group.privacy -->
+		<!-- ENDIF group.hidden -->
+		<!-- ENDIF group.isOwner -->
 
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -105,11 +107,11 @@
 		<div widget-area="left"></div>
 	</div>
 	<div class="col-lg-6 col-xs-12">
-		<!-- IF group.privacy -->
+		<!-- IF group.supportTopic -->
 		<div class="clearfix" style="padding-bottom: 20px;">
 			<button class="pull-right btn btn-primary" data-action="new-topic">新主题</button>
 		</div>
-		<!-- ENDIF group.privacy -->
+		<!-- ENDIF group.supportTopic -->
 
 		<!-- IF group.isOwner -->
 		<div class="panel panel-default">
