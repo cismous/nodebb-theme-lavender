@@ -30,9 +30,9 @@
 				<h3 class="panel-title">
 					<i class="fa fa-users"></i> [[groups:details.members]]
 					<!-- IF group.isOwner -->
-					<!-- IF group.hidden -->
+					<!-- IF group.private -->
 					<a class="label label-info pull-right" href="#" data-ajaxify="false" data-action="add-user" style="color: #fff;">添加用户</a>
-					<!-- ENDIF group.hidden -->
+					<!-- ENDIF group.private -->
 					<!-- ENDIF group.isOwner -->
 
 				</h3>
