@@ -16,50 +16,50 @@
         </div>
         <!-- ENDIF !invite.length -->
 
-        <ul component="invite" id="invite-container" itemscope itemtype="http://www.schema.org/itemlist" data-nextstart="{nextstart}">
-            <meta itemprop="itemlistorder" content="descending">
-            <!-- begin invite -->
+        <ul component="invite" id="invite-container" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}">
+            <meta itemprop="itemListOrder" content="descending">
+            <!-- BEGIN invite -->
             <li component="invite/post" class="category-item" data-iid="{invite.iid}" data-index="{invite.index}">
 
                 <div class="category-body">
                     <div class="row">
                         <div class="col-md-10 col-sm-9">
                             <div class="category-profile-pic">
-                                <a href="<!-- if invite.user.userslug -->{config.relative_path}/user/{invite.user.userslug}<!-- else -->#<!-- endif invite.user.userslug -->">
+                                <a href="<!-- IF invite.user.userslug -->{config.relative_path}/user/{invite.user.userslug}<!-- ELSE -->#<!-- ENDIF invite.user.userslug -->">
                                     <img src="{invite.user.picture}" alt="{invite.user.username}" class="profile-image user-img" title="{invite.user.username}">
                                 </a>
                             </div>
                             <div class="category-text">
-                                <p><strong><i component="invite/pinned" class="fa fa-thumb-tack<!-- if !invite.pinned --> hide<!-- endif !invite.pinned -->"></i> <i component="invite/locked" class="fa fa-lock<!-- if !invite.locked --> hide<!-- endif !invite.locked -->"></i></strong>
+                                <p><strong><i component="invite/pinned" class="fa fa-thumb-tack<!-- IF !invite.pinned --> hide<!-- ENDIF !invite.pinned -->"></i> <i component="invite/locked" class="fa fa-lock<!-- IF !invite.locked --> hide<!-- ENDIF !invite.locked -->"></i></strong>
                                     <a href="{config.relative_path}/invite/{invite.slug}" itemprop="url" class="invite-title">{invite.username}</a><br />
                                     <small>
-                                        {invite.user.username} [[invite:list.posted_ago, <span class="timeago" title="{invite.relativetime}"></span>]]，
+                                        {invite.user.username} [[invite:list.posted_ago, <span class="timeago" title="{invite.relativeTime}"></span>]]，
                                     </small>
                                     <small>
-                                        <!-- if invite.deleted -->
+                                        <!-- IF invite.deleted -->
                                         [[invite:list.status_deleted]]
-                                        <!-- else -->
-                                        <!-- if invite.joined -->
+                                        <!-- ELSE -->
+                                        <!-- IF invite.joined -->
                                         [[invite:list.status_joined]]
-                                        <!-- else -->
-                                        <!-- if invite.expired -->
-                                        有效期内，{invite.expiredtext}，[[invite:list.status_failed]]
-                                        <!-- else -->
-                                        <!-- if invite.invited -->
-                                        [[invite:list.status_invited]]，{invite.emailstatustext}
-                                        <!-- else -->
-                                        [[invite:list.status_voting]]，已得{invite.invitecount}票，<!-- if invite.downvotecount -->其中反对票{invite.downvotecount}，<!-- endif invite.downvotecount -->还需{invite.remaincount}票
-                                        <!-- endif invite.invited -->
-                                        <!-- endif invite.expired -->
-                                        <!-- endif invite.joined -->
-                                        <!-- endif invite.deleted -->
+                                        <!-- ELSE -->
+                                        <!-- IF invite.expired -->
+                                        有效期内，{invite.expiredText}，[[invite:list.status_failed]]
+                                        <!-- ELSE -->
+                                        <!-- IF invite.invited -->
+                                        [[invite:list.status_invited]]，{invite.emailStatusText}
+                                        <!-- ELSE -->
+                                        [[invite:list.status_voting]]，已得{invite.inviteCount}票，<!-- IF invite.downvoteCount -->其中反对票{invite.downvoteCount}，<!-- ENDIF invite.downvoteCount -->还需{invite.remainCount}票
+                                        <!-- ENDIF invite.invited -->
+                                        <!-- ENDIF invite.expired -->
+                                        <!-- ENDIF invite.joined -->
+                                        <!-- ENDIF invite.deleted -->
                                     </small>
                                 </p>
                             </div>
                         </div>
-                        <div class="col-xs-1 category-stat hidden-xs<!-- if !invite.postcount --> invite-item-gray<!-- endif !invite.postcount -->">
-                            <strong class="human-readable-number" title="{invite.postcount}">{invite.postcount}</strong><br />
-                            <small>[[invite:list.postcount]]</small>
+                        <div class="col-xs-1 category-stat hidden-xs<!-- IF !invite.postCount --> invite-item-gray<!-- ENDIF !invite.postCount -->">
+                            <strong class="human-readable-number" title="{invite.postCount}">{invite.postCount}</strong><br />
+                            <small>[[invite:list.postCount]]</small>
                         </div>
                         <div class="col-xs-1 category-stat hidden-xs">
                             <strong class="human-readable-number" title="{invite.viewcount}">{invite.viewcount}</strong><br />
