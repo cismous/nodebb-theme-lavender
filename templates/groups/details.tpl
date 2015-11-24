@@ -6,14 +6,6 @@
 		<div class="instructions">[[groups:cover-instructions]]</div>
 	</div>
 	<div class="col-lg-6 col-xs-12">
-		<!-- IF group.isOwner -->
-		<!-- IF group.hidden -->
-		<div class="clearfix" style="padding-bottom: 20px;">
-			<button class="pull-left btn btn-primary" data-action="add-user">添加用户</button>
-		</div>
-		<!-- ENDIF group.hidden -->
-		<!-- ENDIF group.isOwner -->
-
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">
@@ -34,7 +26,15 @@
 		</div>
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 class="panel-title"><i class="fa fa-users"></i> [[groups:details.members]]</h3>
+				<h3 class="panel-title">
+					<i class="fa fa-users"></i> [[groups:details.members]]
+					<!-- IF group.isOwner -->
+					<!-- IF group.hidden -->
+					<a class="label label-info pull-right" href="#" data-ajaxify="false" data-action="add-user" style="color: #fff;">添加用户</a>
+					<!-- ENDIF group.hidden -->
+					<!-- ENDIF group.isOwner -->
+
+				</h3>
 			</div>
 			<div class="panel-body">
 				<table component="groups/members" class="table table-striped table-hover">
@@ -107,12 +107,6 @@
 		<div widget-area="left"></div>
 	</div>
 	<div class="col-lg-6 col-xs-12">
-		<!-- IF group.supportTopic -->
-		<div class="clearfix" style="padding-bottom: 20px;">
-			<button class="pull-right btn btn-primary" data-action="new-topic">新主题</button>
-		</div>
-		<!-- ENDIF group.supportTopic -->
-
 		<!-- IF group.isOwner -->
 		<div class="panel panel-default">
 			<div class="panel-heading pointer" data-toggle="collapse" data-target=".options">
@@ -195,6 +189,7 @@
 			<div class="panel-heading">
 				<h3 class="panel-title">
 					<i class="fa fa-cogs"></i> 主题列表
+					<a class="label label-info pull-right" href="#" data-ajaxify="false" data-action="new-topic" style="color: #fff;">新主题</a>
 				</h3>
 			</div>
 
