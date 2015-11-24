@@ -12,6 +12,7 @@
 					<i class="fa fa-list-ul"></i> [[groups:details.title]]
 					<!-- IF group.private --><span class="label label-info">[[groups:details.private]]</span><!-- ENDIF group.private -->
 					<!-- IF group.hidden --><span class="label label-info">[[groups:details.hidden]]</span>&nbsp;<!-- ENDIF group.hidden -->
+					<!-- IF group.supportTopic --><span class="label label-info">[[groups:details.support_topic]]</span>&nbsp;<!-- ENDIF group.supportTopic -->
 				</h3>
 			</div>
 			<div class="panel-body">
