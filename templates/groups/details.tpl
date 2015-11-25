@@ -190,7 +190,9 @@
 			<div class="panel-heading">
 				<h3 class="panel-title">
 					<i class="fa fa-cogs"></i> 主题列表
+					<!-- IF group.isMember -->
 					<a class="label label-info pull-right" href="#" data-ajaxify="false" data-action="new-topic" style="color: #fff;">新主题</a>
+					<!-- ENDIF group.isMember -->
 				</h3>
 			</div>
 
