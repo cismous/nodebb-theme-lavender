@@ -197,13 +197,24 @@
 			</div>
 
 			<div class="panel-body">
-				<!-- BEGIN posts -->
-				<div class="row">
-					<div>
-						<a href="/topic/{posts.slug}">{posts.title}</a>
-					</div>
-				</div>
-				<!-- END posts -->
+				<table class="table table-striped table-hover">
+					<!-- BEGIN posts -->
+					<tr data-uid="{posts.user.uid}">
+						<td>
+							<a href="{config.relative_path}/user/{posts.user.userslug}"><img style="width: 32px;" src="{posts.user.picture}" /></a>
+						</td>
+						<td style="vertical-align: middle;">
+							<a href="{config.relative_path}/topic/{posts.slug}">{posts.title}</a>
+						</td>
+						<td style="vertical-align: middle;">
+							<div class="pull-right">
+								<span>浏览: </span><span style="padding-right:4px;">{posts.viewcount}</span>
+								<span>回复: </span><span>{posts.postcount}</span>
+							</div>
+						</td>
+					</tr>
+					<!-- END posts -->
+				</table>
 			</div>
 		</div>
 		<!-- ELSE -->
