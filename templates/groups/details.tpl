@@ -245,7 +245,7 @@
 					<ul class="record-list list-unstyled"></ul>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" id="create-modal-go">完成</button>
+					<button type="button" class="btn btn-primary record-complete">完成</button>
 				</div>
 			</div>
 		</div>
