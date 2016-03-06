@@ -40,11 +40,11 @@
 		<div class="row category-tag-row">
 			<div class="btn-toolbar formatting-bar">
 				<div class="btn-group">
-					<!-- IF isGroup -->
+					<!-- IF supportRecord -->
 						<span class="btn btn-link" data-format="record" tabindex="-1">
 							<i class="fa fa-microphone"></i>
 						</span>
-					<!-- ENDIF isGroup -->
+					<!-- ENDIF supportRecord -->
 					<!-- BEGIN formatting -->
 						<!-- IF formatting.spacer -->
 						<span class="btn spacer"></span>
