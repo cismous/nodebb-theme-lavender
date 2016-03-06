@@ -37,7 +37,7 @@
 									</h3>
 									<div class="record-list">
 										<!-- BEGIN record -->
-										<audio controls="" src="/uploads/record/56dbe6c7acb44a2098638fdb.wmv"></audio>
+										<audio controls="" src="{{record.url}}"></audio>
 										<!-- END record -->
 									</div>
 									<!-- ENDIF @first -->
