@@ -1,4 +1,4 @@
-<div component="groups/container" class="details row">
+<div component="groups/container" class="group-detail details row">
 	<div class="col-xs-12" component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
 		<div class="change">[[groups:cover-change]] <i class="fa fa-fw fa-pencil-square-o"></i></div>
 		<div class="save">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
@@ -199,11 +199,14 @@
 			<div class="panel-body">
 				<table class="table table-striped table-hover">
 					<!-- BEGIN posts -->
-					<tr data-uid="{posts.user.uid}">
+					<tr data-uid="{posts.user.uid}" data-tid="{posts.tid}" data-record="{posts.record}">
 						<td>
 							<a href="{config.relative_path}/user/{posts.user.userslug}"><img style="width: 32px;" src="{posts.user.picture}" /></a>
 						</td>
 						<td style="vertical-align: middle;">
+							<!-- IF posts.record -->
+							<button class="btn btn-primary btn-play" data-action="play-record">播放</button>
+							<!-- ENDIF posts.record -->
 							<a href="{config.relative_path}/topic/{posts.slug}">{posts.title}</a>
 						</td>
 						<td style="vertical-align: middle;">
@@ -226,6 +229,43 @@
 		</div>
 		<!-- ENDIF group.supportTopic -->
 		<div widget-area="right"></div>
+	</div>
+
+	<div class="modal fade" id="record-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">录音</h4>
+				</div>
+				<div class="modal-body">
+					<button class="btn btn-normal record-start">开始录音</button>
+					<button class="btn btn-normal record-stop" disabled>停止录音</button>
+
+					<ul class="record-list list-unstyled"></ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="create-modal-go">完成</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="record-play-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">录音</h4>
+				</div>
+				<div class="modal-body">
+					<ul class="record-list list-unstyled"></ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary play-complete">完成</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
