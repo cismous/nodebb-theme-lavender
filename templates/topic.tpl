@@ -35,12 +35,12 @@
 										<p component="post/header" class="topic-title" itemprop="name"><i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span component="topic/title">{title}</span></p>
 										<hr>
 									</h3>
-									<div class="record-list">
-										<!-- BEGIN record -->
-										<audio controls="" src="{{record.url}}"></audio>
-										<!-- END record -->
-									</div>
 									<!-- ENDIF @first -->
+									<div class="record-list">
+										<!-- BEGIN posts.record -->
+										<audio controls="" src="{{posts.record.url}}"></audio>
+										<!-- END posts.record -->
+									</div>
 									<div component="post/content" class="post-content" itemprop="text">{{posts.content}}</div>
 									<!-- IF posts.user.signature -->
 									<div class="post-signature">{posts.user.signature}</div>
@@ -126,6 +126,26 @@
 
 	<div class="post-bar col-xs-12 <!-- IF unreplied -->hidden<!-- ENDIF unreplied --> bottom-post-bar">
 		<!-- IMPORT partials/post_bar.tpl -->
+	</div>
+
+	<div class="modal fade" id="record-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">录音</h4>
+				</div>
+				<div class="modal-body">
+					<button class="btn btn-normal record-start">开始录音</button>
+					<button class="btn btn-normal record-stop" disabled>停止录音</button>
+
+					<ul class="record-list list-unstyled"></ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary record-complete">完成</button>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- IF config.usePagination -->
