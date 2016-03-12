@@ -205,7 +205,10 @@
 						</td>
 						<td style="vertical-align: middle;">
 							<!-- IF posts.record -->
-							<button class="btn btn-primary btn-play" data-action="play-record">播放</button>
+							<i title="播放第一个语音" class="fa fa-play-circle" data-action="play-record"></i>
+							<i title="播放所有语音" class="fa fa-forward" data-action="all-record"></i>
+							<i title="暂停" class="fa fa-pause-circle" data-action="pause-record"></i>
+							<i title="停止" class="fa fa-stop-circle" data-action="stop-record"></i>
 							<!-- ENDIF posts.record -->
 							<a href="{config.relative_path}/topic/{posts.slug}">{posts.title}</a>
 						</td>
