@@ -128,26 +128,6 @@
 		<!-- IMPORT partials/post_bar.tpl -->
 	</div>
 
-	<div class="modal fade" id="record-modal">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">录音</h4>
-				</div>
-				<div class="modal-body">
-					<button class="btn btn-normal record-start">开始录音</button>
-					<button class="btn btn-normal record-stop" disabled>停止录音</button>
-
-					<ul class="record-list list-unstyled"></ul>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary record-complete">完成</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<!-- IF config.usePagination -->
 		<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
