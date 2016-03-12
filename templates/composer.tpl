@@ -41,7 +41,7 @@
 			<div class="btn-toolbar formatting-bar">
 				<div class="btn-group">
 					<!-- IF supportRecord -->
-						<span class="btn btn-link" data-format="record" tabindex="-1">
+						<span class="btn record" data-format="record-toggle" tabindex="-1">
 							<i class="fa fa-microphone"></i>
 						</span>
 					<!-- ENDIF supportRecord -->
@@ -122,6 +122,9 @@
 				<!-- ENDIF isTopicOrMain -->
 			</div>
 		</div>
+
+		<ul class="record-list list-unstyled">
+		</ul>
 
 		<div class="row write-preview-container">
 			<div class="col-md-6 col-sm-12 write-container">

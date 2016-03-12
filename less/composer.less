@@ -1,9 +1,44 @@
 .composer {
   z-index: 9998;
+
+  .record {
+    &.record-red {
+      color: #E20000;
+    }
+  }
+
+  .record-list {
+    margin-top: 10px;
+
+    li {
+      margin-bottom: 10px;
+      height: 30px;
+      overflow: hidden;
+
+      audio {
+        float: left;
+
+        &:first-of-type {
+          margin-top: 0;
+        }
+
+        margin-top: 8px;
+        display: block;
+      }
+
+      .delete-record {
+        width: 30px;
+        height: 100%;
+        line-height: 30px;
+        font-size: 18px;
+        margin-left: 12px;
+        float: left;
+      }
+    }
+  }
 }
 
 .invite-composer {
-
   .composer-container {
 
     .invite-reason {
