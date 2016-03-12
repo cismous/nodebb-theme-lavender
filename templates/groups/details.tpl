@@ -186,7 +186,7 @@
 		</div>
 		<!-- ENDIF group.isOwner -->
 		<!-- IF group.supportTopic -->
-		<div class="panel panel-default">
+		<div class="panel topic-list panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">
 					<i class="fa fa-cogs"></i> 主题列表
