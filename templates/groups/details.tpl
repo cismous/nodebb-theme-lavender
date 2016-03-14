@@ -214,6 +214,7 @@
 						</td>
 						<td style="vertical-align: middle;">
 							<div class="pull-right">
+								<span>字数: </span><span style="padding-right:4px;">{posts.contentLen}</span>
 								<span>浏览: </span><span style="padding-right:4px;">{posts.viewcount}</span>
 								<span>回复: </span><span>{posts.postcount}</span>
 							</div>
