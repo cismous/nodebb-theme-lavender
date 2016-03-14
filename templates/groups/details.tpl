@@ -205,10 +205,10 @@
 						</td>
 						<td style="vertical-align: middle;">
 							<!-- IF posts.record -->
-							<i title="播放第一个语音" class="fa fa-play-circle" data-action="play-record"></i>
+							<i title="播放第一个语音" class="fa fa-play" data-action="play-record"></i>
 							<i title="播放所有语音" class="fa fa-forward" data-action="all-record"></i>
-							<i title="暂停" class="fa fa-pause-circle" data-action="pause-record"></i>
-							<i title="停止" class="fa fa-stop-circle" data-action="stop-record"></i>
+							<i title="暂停" class="fa fa-pause" data-action="pause-record"></i>
+							<i title="停止" class="fa fa-stop" data-action="stop-record"></i>
 							<!-- ENDIF posts.record -->
 							<a href="{config.relative_path}/topic/{posts.slug}">{posts.title}</a>
 						</td>
