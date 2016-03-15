@@ -5,7 +5,7 @@
 		<div class="indicator">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
 		<div class="instructions">[[groups:cover-instructions]]</div>
 	</div>
-	<div class="col-lg-6 col-xs-12">
+	<div class="col-lg-5 col-xs-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">
@@ -107,7 +107,7 @@
 		<!-- ENDIF group.isOwner -->
 		<div widget-area="left"></div>
 	</div>
-	<div class="col-lg-6 col-xs-12">
+	<div class="col-lg-7 col-xs-12">
 		<!-- IF group.isOwner -->
 		<div class="panel panel-default">
 			<div class="panel-heading pointer" data-toggle="collapse" data-target=".options">

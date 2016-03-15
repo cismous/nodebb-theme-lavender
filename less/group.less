@@ -1,6 +1,27 @@
 .group-detail {
   .panel {
     &.topic-list {
+      .panel-heading {
+        height: 37px;
+        padding: 0 15px;
+
+        .panel-title {
+          height: 100%;
+          line-height: 37px;
+
+          a {
+            background: #2461b2;
+            padding: 0 15px;
+            height: 100%;
+            line-height: 35px;
+
+            &:hover {
+              background: #3179d5;
+            }
+          }
+        }
+      }
+
       .panel-body {
         table tr td {
           line-height: 32px;
