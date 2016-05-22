@@ -1,5 +1,4 @@
 <div class="composer">
-
 	<div class="composer-container">
 		<nav class="navbar navbar-fixed-top mobile-navbar visible-xs visible-sm">
 			<span class="pull-left">
@@ -126,7 +125,7 @@
 		<ul class="record-list list-unstyled">
 		</ul>
 
-		<div class="row write-preview-container">
+		<div class="row write-preview-container" style="display: none;">
 			<div class="col-md-6 col-sm-12 write-container">
 				<div class="help-text">
 					[[modules:composer.compose]] <span class="help hidden"><i class="fa fa-question-circle"></i></span>
@@ -140,6 +139,10 @@
 				</div>
 				<div class="preview well"></div>
 			</div>
+		</div>
+
+		<div class="text-editor">
+			<textarea id="text-editor" cols="30" rows="10"></textarea>
 		</div>
 
 		<div class="imagedrop"><div>[[topic:composer.drag_and_drop_images]]</div></div>
