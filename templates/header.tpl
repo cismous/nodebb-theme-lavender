@@ -26,8 +26,8 @@
 		};
 	</script>
 	<script src="{relative_path}/recorder.js"></script>
+	<script src="{relative_path}/tinymce/tinymce.min.js"></script>
 	<script src="{relative_path}/nodebb.min.js?{script-buster}"></script>
-	<script src="{relative_path}/tinymce.min.js"></script>
 	<!-- IMPORT partials/requirejs-config.tpl -->
 
 	<!-- IF useCustomJS -->
