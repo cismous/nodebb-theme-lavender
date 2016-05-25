@@ -28,17 +28,6 @@
         <div class="row category-tag-row">
             <div class="btn-toolbar formatting-bar">
                 <div class="invite-reason hide">[[invite:composer.invite_reason]]</div>
-                <div class="btn-group">
-                    <!-- BEGIN formatting -->
-                    <!-- IF formatting.spacer -->
-                    <span class="btn spacer"></span>
-                    <!-- ELSE -->
-                    <!-- IF !formatting.mobile -->
-                    <span class="btn btn-link" tabindex="-1" data-format="{formatting.name}"><i class="{formatting.className}"></i></span>
-                    <!-- ENDIF !formatting.mobile -->
-                    <!-- ENDIF formatting.spacer -->
-                    <!-- END formatting -->
-                </div>
 
                 <div class="btn-group pull-right action-bar hidden-sm hidden-xs">
                     <button class="btn btn-default composer-discard" data-action="discard" tabindex="-1"><i class="fa fa-times"></i> [[topic:composer.discard]]</button>
