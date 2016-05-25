@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        <div class="row write-preview-container">
+        <div class="row write-preview-container" style="display: none;">
             <div class="col-md-6 col-sm-12 write-container">
                 <div class="help-text">
                     [[modules:composer.compose]] <span class="help hidden"><i class="fa fa-question-circle"></i></span>
@@ -74,6 +74,10 @@
                 </div>
                 <div class="preview well"></div>
             </div>
+        </div>
+
+        <div class="text-editor">
+            <textarea id="text-editor" cols="30" rows="10"></textarea>
         </div>
 
         <div class="resizer">
