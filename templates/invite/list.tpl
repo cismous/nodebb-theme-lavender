@@ -43,7 +43,7 @@
                                         [[invite:list.status_joined]]
                                         <!-- ELSE -->
                                         <!-- IF invite.expired -->
-                                        有效期内，{invite.expiredText}，[[invite:list.status_failed]]
+                                        {invite.expiredText}，[[invite:list.status_failed]]
                                         <!-- ELSE -->
                                         <!-- IF invite.invited -->
                                         [[invite:list.status_invited]]，{invite.emailStatusText}
