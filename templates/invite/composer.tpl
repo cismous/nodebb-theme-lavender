@@ -31,7 +31,7 @@
         <div class="row category-tag-row">
             <div class="btn-group">
                 <input id="post-image-upload" type="file" accept="image/*" style="width: 0; height:0; overflow: hidden;"/>
-                <input id="post-file-upload" type="file" accept="image/*" style="width: 0; height:0; overflow: hidden;"/>
+                <input id="post-file-upload" type="file" style="width: 0; height:0; overflow: hidden;"/>
             </div>
             <div class="btn-toolbar formatting-bar">
                 <div class="invite-reason hide">[[invite:composer.invite_reason]]</div>

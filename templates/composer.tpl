@@ -48,7 +48,7 @@
 						</span>
 					<!-- ENDIF supportRecord -->
 					<input id="post-image-upload" type="file" accept="image/*" style="width: 0; height:0; overflow: hidden;"/>
-					<input id="post-file-upload" type="file" accept="image/*" style="width: 0; height:0; overflow: hidden;"/>
+					<input id="post-file-upload" type="file" style="width: 0; height:0; overflow: hidden;"/>
 				</div>
 
 				<div class="btn-group pull-right action-bar hidden-sm hidden-xs">
