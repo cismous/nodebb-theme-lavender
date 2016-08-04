@@ -46,6 +46,17 @@
 									<div class="post-signature">{posts.user.signature}</div>
 									<!-- ENDIF posts.user.signature -->
 								</div>
+								<!-- IF posts.hasAttachment -->
+								<div class="attachment">
+									<hr>
+									<div class="attachment-title">附件下载: </div>
+									<div class="file-list">
+										<!-- BEGIN posts.attachment -->
+										<a href="{{posts.attachment.url}}" download="{{posts.attachment.name}}" target="_blank">{{posts.attachment.name}}</a>
+										<!-- END posts.attachment -->
+									</div>
+								</div>
+								<!-- ENDIF posts.hasAttachment -->
 							</div>
 						</div>
 					</div>
